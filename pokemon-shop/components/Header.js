@@ -1,7 +1,12 @@
+import { HomeIcon } from "@heroicons/react/outline";
+import HeaderItem from "./HeaderItem";
+
 function Header() {
   return (
     <header>
-      <h1>yp</h1>
+      <div>
+        <HeaderItem title="Home" Icon={HomeIcon} />
+      </div>
     </header>
   );
 }
