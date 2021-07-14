@@ -9,9 +9,9 @@ import Search from "./Search";
 function Header() {
   return (
     <header>
-      <div>
+      <div className="">
         <HeaderItem title="Home" Icon={HomeIcon} />
-        <HeaderItem title="Home" Icon={ShoppingCartIcon} />
+        <HeaderItem title="Cart" Icon={ShoppingCartIcon} />
         <Search Icon={SearchIcon} placeholder="Pokemon Search..." />
       </div>
     </header>
