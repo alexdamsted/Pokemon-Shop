@@ -1,4 +1,4 @@
-import { HomeIcon } from "@heroicons/react/outline";
+import { HomeIcon, ShoppingCartIcon } from "@heroicons/react/outline";
 import HeaderItem from "./HeaderItem";
 
 function Header() {
@@ -6,6 +6,7 @@ function Header() {
     <header>
       <div>
         <HeaderItem title="Home" Icon={HomeIcon} />
+        <HeaderItem title="Home" Icon={ShoppingCartIcon} />
       </div>
     </header>
   );
