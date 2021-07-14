@@ -8,11 +8,13 @@ import Search from "./Search";
 
 function Header() {
   return (
-    <header>
-      <div className="w-full m-auto sm:w-full sm:flex sm:justify-center sm:gap-5">
+    <header className="">
+      <div className="w-full my-7 sm:w-full sm:flex sm:justify-center">
+        <Search Icon={SearchIcon} placeholder="Pokemon Search..." />
+      </div>
+      <div className="w-full flex justify-center">
         <HeaderItem title="Home" Icon={HomeIcon} />
         <HeaderItem title="Cart" Icon={ShoppingCartIcon} />
-        <Search Icon={SearchIcon} placeholder="Pokemon Search..." />
       </div>
     </header>
   );
