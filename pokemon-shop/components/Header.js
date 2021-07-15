@@ -11,7 +11,7 @@ function Header() {
   return (
     <header className="m-auto">
       <div className="m-6 sm:flex sm:justify-between">
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center gap-5">
           <HeaderItem title="Home" Icon={HomeIcon} />
           <HeaderItem title="Cart" Icon={ShoppingCartIcon} />
         </div>

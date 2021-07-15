@@ -1,9 +1,9 @@
 function HeaderItem({ title, Icon }) {
   return (
     <>
-      <div className="mx-4 my-4 cursor-pointer group hover:text-white">
+      <div className="flex items-center my-4 cursor-pointer group hover:text-white">
         <Icon className="h-8" />
-        <p className="hidden group-hover:block">{title}</p>
+        <p className="ml-1 font-semibold">{title}</p>
       </div>
     </>
   );
