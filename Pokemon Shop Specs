@@ -1,0 +1,12 @@
+Pokemon Shop:
+- Header (Cart + Home + Loved Pokemon, Search bar, Logo).
+- Body
+  - Sections (All Pokemon, Strongest Pokemon, 
+  Pokemon by Type (one section for each type),
+  Heaviest Pokemon, Fastest Pokemon, Tallest Pokemon)
+- Footer (Logo, Copyright, Help, About, Developer)
+
+. Pokemon sections are image carousels/sliders
+. Click on a Pokemon to open up a modal, opacity of background lowered
+  . Info about Pokemon is displayed w/Large image
+    . Click outside of modal to go back to full opacity website
