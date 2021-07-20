@@ -9,8 +9,8 @@ import Search from "./Search";
 
 function Header() {
   return (
-    <header className="m-auto">
-      <div className="m-6 sm:flex sm:justify-between">
+    <header className="m-auto sm:px-20">
+      <div className="m-6 lg:flex lg:justify-between">
         <div className="flex justify-center items-center gap-5">
           <HeaderItem title="Home" Icon={HomeIcon} />
           <HeaderItem title="Cart" Icon={ShoppingCartIcon} />
