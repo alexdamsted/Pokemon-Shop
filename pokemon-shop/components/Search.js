@@ -1,6 +1,6 @@
 function Search({ Icon, placeholder }) {
   return (
-    <div class="flex items-center my-4 w-full">
+    <div class="flex items-center mt-10 my-4 w-full">
       {" "}
       <input
         type="text"
