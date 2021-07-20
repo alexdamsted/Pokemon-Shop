@@ -11,7 +11,7 @@ import Search from "./Search";
 function Header() {
   return (
     <header className="m-auto py-5 sm:px-20 sm:py-10">
-      <div className="lg:flex lg:justify-between">
+      <div className="lg:flex lg:justify-evenly">
         <div className="flex justify-center items-center flex-col sm:flex-row sm:gap-5">
           <HeaderItem title="Home" Icon={HomeIcon} />
           <HeaderItem title="Cart" Icon={ShoppingCartIcon} />
