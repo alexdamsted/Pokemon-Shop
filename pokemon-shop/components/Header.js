@@ -2,6 +2,7 @@ import {
   HomeIcon,
   ShoppingCartIcon,
   SearchIcon,
+  HeartIcon,
 } from "@heroicons/react/outline";
 import HeaderItem from "./HeaderItem";
 import Logo from "./Logo";
@@ -14,6 +15,7 @@ function Header() {
         <div className="flex justify-center items-center gap-5">
           <HeaderItem title="Home" Icon={HomeIcon} />
           <HeaderItem title="Cart" Icon={ShoppingCartIcon} />
+          <HeaderItem title="Loved" Icon={HeartIcon} />
         </div>
         <div className="text-center sm:flex sm:justify-center sm:items-center">
           <Logo text="Pokémon Store" />
