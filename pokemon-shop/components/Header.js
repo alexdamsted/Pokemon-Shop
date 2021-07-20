@@ -12,7 +12,7 @@ function Header() {
   return (
     <header className="m-auto py-5 sm:px-20 sm:py-10">
       <div className="lg:flex lg:justify-evenly">
-        <div className="flex justify-center items-center flex-col sm:flex-row sm:gap-5">
+        <div className="flex justify-center items-center flex-col sm:flex-row sm:gap-10">
           <HeaderItem title="Home" Icon={HomeIcon} />
           <HeaderItem title="Cart" Icon={ShoppingCartIcon} />
           <HeaderItem title="Loved" Icon={HeartIcon} />
