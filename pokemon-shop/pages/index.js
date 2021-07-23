@@ -4,11 +4,22 @@ import requests from "../components/requests";
 import Content from "../components/Content";
 import Header from "../components/Header";
 
-export default function Home() {
+export const getStaticProps = async () => {
+  const res = await fetch("https://pokeapi.co/api/v2/pokemon/");
+  const data = await res.json();
+
+  return {
+    props: { pokemon: data },
+  };
+};
+
+export default function Home({ pokemon }) {
+  //console.log(pokemon.results[0]);
+
   return (
     <>
       <Header />
-      <Content title="All Pokémon" fetchUrl={requests.fetchPokemon} />
+      <Content pokemon={pokemon} />
     </>
   );
 }

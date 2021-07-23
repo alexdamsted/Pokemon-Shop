@@ -1,6 +1,6 @@
 const requests = {
-  fetchPokemon: "https://pokeapi.co/api/v2/pokemon/",
-  fetchItem: "https://pokeapi.co/api/v2/item/",
+  fetchPokemon: "pokemon",
+  fetchItem: "item",
 };
 
 export default requests;
