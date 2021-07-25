@@ -1,9 +1,6 @@
 Pokemon Shop:
 - Header (Cart + Home + Loved Pokemon, Search bar, Logo).
-- Body
-  - Sections (All Pokemon, Strongest Pokemon, 
-  Pokemon by Type (one section for each type),
-  Heaviest Pokemon, Fastest Pokemon, Tallest Pokemon)
+- Body (A list of all Pokemon ordered from older generations to current)
 - Footer (Logo, Copyright, Help, About, Developer)
 
 . Pokemon sections are image carousels/sliders
