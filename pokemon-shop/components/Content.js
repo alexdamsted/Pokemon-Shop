@@ -8,10 +8,12 @@ const Content = ({ pokemon }) => {
   const imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonIndex}.png`;
 
   return (
-    <div>
-      <h1 className="text-3xl font-bold">{name}</h1>
-      <Image src={imageUrl} width="200" height="200" />
-    </div>
+    <main className="flex flex-col items-center border border-red-500">
+      <h1 className="text-3xl font-bold border border-red-500">{name}</h1>
+      <div className="border border-red-500">
+        <Image src={imageUrl} width="200" height="200" className="" />
+      </div>
+    </main>
   );
 };
 export default Content;
