@@ -18,9 +18,11 @@ export default function Home({ pokemon }) {
   return (
     <>
       <Header />
-      {pokemon.results.map((pokemon) => (
-        <Content key={pokemon.name} pokemon={pokemon} />
-      ))}
+      <main className="flex flex-col items-center justify-center sm:flex-row sm:flex-wrap">
+        {pokemon.results.map((pokemon) => (
+          <Content key={pokemon.name} pokemon={pokemon} />
+        ))}
+      </main>
     </>
   );
 }
