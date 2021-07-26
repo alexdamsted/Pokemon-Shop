@@ -1,10 +1,10 @@
 function Search({ handleChange, Icon, placeholder }) {
   return (
-    <div className="flex items-center mt-10 my-4 w-full">
+    <div className="my-20 flex items-center w-full md:my-10">
       {" "}
       <input
         type="text"
-        className="w-full text-center text-2xl text-gray-500 py-3 rounded z-0 focus:shadow focus:outline-none md:text-3xl md:py-5"
+        className="w-full text-center text-2xl text-gray-500 py-3 rounded z-0 focus:shadow focus:outline-none md:text-3xl md:py-4"
         placeholder={placeholder}
         onChange={handleChange}
       />

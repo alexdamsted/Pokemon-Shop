@@ -13,7 +13,7 @@ const Pokemon = ({ pokemon }) => {
   };
 
   return (
-    <>
+    <main className="bg-white text-gray-600 my-10 flex flex-col items-center justify-center sm:flex-row sm:flex-wrap">
       {/* this should be a stateful array of all pokemon??? */}
       {pokemon.map((pokemon) => (
         <div className="p-5" key={pokemon.name}>
@@ -23,7 +23,7 @@ const Pokemon = ({ pokemon }) => {
           <Image src={getSpriteUrl(pokemon.url)} width="250" height="250" />
         </div>
       ))}
-    </>
+    </main>
   );
 };
 
