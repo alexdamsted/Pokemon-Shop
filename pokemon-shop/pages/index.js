@@ -29,9 +29,8 @@ export default function Home({ pokemon }) {
   return (
     <>
       <Header handleChange={handleChange} />
-      <main className="flex flex-col items-center justify-center sm:flex-row sm:flex-wrap">
-        <Pokemon pokemon={filterPokemon(pokemon)} />
-      </main>
+
+      <Pokemon pokemon={filterPokemon(pokemon)} />
     </>
   );
 }
