@@ -1,7 +1,4 @@
 import { useState } from "react";
-import Head from "next/head";
-import Image from "next/image";
-import requests from "../components/requests";
 import Content from "../components/Content";
 import Header from "../components/Header";
 
@@ -15,11 +12,25 @@ export const getStaticProps = async () => {
 };
 
 export default function Home({ pokemon }) {
+  const [InputBox, setInputBox] = useState({ inputBox: [] });
+
+  const handleChange = (event) => {
+    setInputBox({ inputBox: event.target.value });
+  };
+
+  const filterPokemon = (pokemon) => {
+    return pokemon.results.filter((pokemon) =>
+      pokemon.name
+        .toLowerCase()
+        .includes(InputBox.inputBox.toString().toLowerCase())
+    );
+  };
+
   return (
     <>
-      <Header />
+      <Header handleChange={handleChange} />
       <main className="flex flex-col items-center justify-center sm:flex-row sm:flex-wrap">
-        <Content pokemon={pokemon.results} />
+        <Content pokemon={filterPokemon(pokemon)} />
       </main>
     </>
   );

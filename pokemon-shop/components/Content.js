@@ -1,9 +1,6 @@
-import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 const Content = ({ pokemon }) => {
-  const filteredPokemon = pokemon.filter((pokemon) => pokemon.name.length < 5);
-
   const transformFirstLetterUppercase = (name) => {
     name = name[0].toUpperCase() + name.substring(1);
     return name;
@@ -15,18 +12,10 @@ const Content = ({ pokemon }) => {
     return pokemonSpriteUrl;
   };
 
-  // const [Pokemon, setPokemon] = useState();
-
-  // useEffect(() => {
-  //   setPokemon(pokemon); // pokemon.results prop now stateful
-  // }, [pokemon]);
-
-  // console.log(Pokemon);
-
   return (
     <>
       {/* this should be a stateful array of all pokemon??? */}
-      {filteredPokemon.map((pokemon) => (
+      {pokemon.map((pokemon) => (
         <div className="p-5" key={pokemon.name}>
           <h1 className="text-center text-3xl font-bold">
             {transformFirstLetterUppercase(pokemon.name)}

@@ -8,7 +8,7 @@ import HeaderItem from "./HeaderItem";
 import Logo from "./Logo";
 import Search from "./Search";
 
-function Header() {
+function Header({ handleChange }) {
   return (
     <header className="py-5 sm:px-20 sm:py-10">
       <div className="lg:flex lg:justify-evenly">
@@ -22,7 +22,11 @@ function Header() {
         </div>
       </div>
       <div className="flex justify-center m-auto max-w-md">
-        <Search Icon={SearchIcon} placeholder="Pokémon Search..." />
+        <Search
+          handleChange={handleChange}
+          Icon={SearchIcon}
+          placeholder="Pokémon Search..."
+        />
       </div>
     </header>
   );
