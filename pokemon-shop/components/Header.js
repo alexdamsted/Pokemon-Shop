@@ -10,25 +10,30 @@ import Search from "./Search";
 
 function Header({ handleChange }) {
   return (
-    <header className="py-5 sm:px-20 sm:py-10">
-      <div className="lg:flex lg:justify-evenly">
-        <div className="flex justify-center items-center flex-col sm:flex-row sm:gap-10">
-          <HeaderItem title="Home" Icon={HomeIcon} />
-          <HeaderItem title="Cart" Icon={ShoppingCartIcon} />
-          <HeaderItem title="Loved" Icon={HeartIcon} />
+    <>
+      <header className="bg-white">
+        <div className="my-3 lg:flex lg:justify-evenly">
+          <div className="flex justify-center items-center flex-col sm:flex-row sm:gap-10">
+            <HeaderItem title="Home" Icon={HomeIcon} />
+            <HeaderItem title="Cart" Icon={ShoppingCartIcon} />
+            <HeaderItem title="Loved" Icon={HeartIcon} />
+          </div>
+          <div className="text-center sm:flex sm:justify-center sm:items-center">
+            <Logo text="Pokémon Store" />
+          </div>
         </div>
-        <div className="text-center sm:flex sm:justify-center sm:items-center">
-          <Logo text="Pokémon Store" />
+
+        <div className="bg-gray-200">
+          <div className="flex justify-center m-auto max-w-md">
+            <Search
+              handleChange={handleChange}
+              Icon={SearchIcon}
+              placeholder="Pokémon Search..."
+            />
+          </div>
         </div>
-      </div>
-      <div className="flex justify-center m-auto max-w-md">
-        <Search
-          handleChange={handleChange}
-          Icon={SearchIcon}
-          placeholder="Pokémon Search..."
-        />
-      </div>
-    </header>
+      </header>
+    </>
   );
 }
 
