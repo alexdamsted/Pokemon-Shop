@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Content from "../components/Content";
+import Pokemon from "../components/Pokemon";
 import Header from "../components/Header";
 
 export const getStaticProps = async () => {
@@ -30,7 +30,7 @@ export default function Home({ pokemon }) {
     <>
       <Header handleChange={handleChange} />
       <main className="flex flex-col items-center justify-center sm:flex-row sm:flex-wrap">
-        <Content pokemon={filterPokemon(pokemon)} />
+        <Pokemon pokemon={filterPokemon(pokemon)} />
       </main>
     </>
   );

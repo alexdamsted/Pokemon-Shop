@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const Content = ({ pokemon }) => {
+const Pokemon = ({ pokemon }) => {
   const transformFirstLetterUppercase = (name) => {
     name = name[0].toUpperCase() + name.substring(1);
     return name;
@@ -27,4 +27,4 @@ const Content = ({ pokemon }) => {
   );
 };
 
-export default Content;
+export default Pokemon;
