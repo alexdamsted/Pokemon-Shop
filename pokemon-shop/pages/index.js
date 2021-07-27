@@ -30,6 +30,7 @@ export default function Home({ pokemon }) {
   return (
     <>
       <Header handleChange={handleChange} />
+
       <BannerSection pokemon={pokemon} />
       <Pokemon pokemon={filterPokemon(pokemon)} />
     </>

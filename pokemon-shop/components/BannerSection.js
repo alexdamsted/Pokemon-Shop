@@ -13,16 +13,22 @@ const BannerSection = ({ pokemon }) => {
   return (
     <div className="flex flex-col justify-center items-center xl:flex-row">
       <GenerationBanner
-        title={"GENERATION ONE"}
+        title={"BROWSE GENERATION 1"}
+        bannerImage="/../public/city-center.jpeg"
         bannerPokemon={getPokemonByName(pokemon, "charizard")} // Be precise here!
+        textBgColor="bg-white"
       />
       <GenerationBanner
-        title={"GENERATION TWO"}
+        title={"BROWSE GENERATION 2"}
+        bannerImage="/../public/futuristic-alley.jpeg"
         bannerPokemon={getPokemonByName(pokemon, "meganium")} // Be precise here!
+        textBgColor="bg-white"
       />
       <GenerationBanner
-        title={"GENERATION THREE"}
+        title={"BROWSE GENERATION 3"}
+        bannerImage="/../public/old-alley-cloudy.jpeg"
         bannerPokemon={getPokemonByName(pokemon, "swampert")} // Be precise here!
+        textBgColor="bg-white"
       />
     </div>
   );
