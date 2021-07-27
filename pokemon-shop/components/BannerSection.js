@@ -20,19 +20,19 @@ const BannerSection = ({ pokemon, inputBox }) => {
     >
       <GenerationBanner
         title={"BROWSE GENERATION 1"}
-        bannerImage="/../public/city-center.jpeg"
+        bannerImage="/city-center.jpeg"
         bannerPokemon={getPokemonByName(pokemon, "charizard")} // Be precise here!
         textBgColor="bg-white"
       />
       <GenerationBanner
         title={"BROWSE GENERATION 2"}
-        bannerImage="/../public/futuristic-alley.jpeg"
+        bannerImage="/futuristic-alley.jpeg"
         bannerPokemon={getPokemonByName(pokemon, "meganium")} // Be precise here!
         textBgColor="bg-white"
       />
       <GenerationBanner
         title={"BROWSE GENERATION 3"}
-        bannerImage="/../public/old-alley-cloudy.jpeg"
+        bannerImage="/old-alley-cloudy.jpeg"
         bannerPokemon={getPokemonByName(pokemon, "swampert")} // Be precise here!
         textBgColor="bg-white"
       />
