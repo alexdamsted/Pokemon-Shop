@@ -18,7 +18,7 @@ export default function Home({ pokemon }) {
   const handleChange = (event) => {
     setInputBox({ inputBox: event.target.value });
   };
-
+  console.log(InputBox);
   const filterPokemon = (pokemon) => {
     return pokemon.results.filter((pokemon) =>
       pokemon.name
@@ -30,8 +30,7 @@ export default function Home({ pokemon }) {
   return (
     <>
       <Header handleChange={handleChange} />
-
-      <BannerSection pokemon={pokemon} />
+      <BannerSection pokemon={pokemon} inputBox={InputBox} />
       <Pokemon pokemon={filterPokemon(pokemon)} />
     </>
   );

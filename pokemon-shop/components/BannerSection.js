@@ -1,6 +1,6 @@
 import GenerationBanner from "./GenerationBanner";
 
-const BannerSection = ({ pokemon }) => {
+const BannerSection = ({ pokemon, inputBox }) => {
   const getPokemonByName = (pokemon, name) => {
     const bannerPokemon = pokemon.results.filter((pokemon) =>
       pokemon.name.includes(name)
@@ -11,7 +11,13 @@ const BannerSection = ({ pokemon }) => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center xl:flex-row">
+    <div
+      className={`${
+        inputBox.inputBox != ""
+          ? "hidden"
+          : "flex flex-col justify-center items-center xl:flex-row"
+      }`}
+    >
       <GenerationBanner
         title={"BROWSE GENERATION 1"}
         bannerImage="/../public/city-center.jpeg"
