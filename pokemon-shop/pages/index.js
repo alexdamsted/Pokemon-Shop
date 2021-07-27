@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Pokemon from "../components/Pokemon";
 import Header from "../components/Header";
+import BannerSection from "../components/BannerSection";
 
 export const getStaticProps = async () => {
   const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=2000/");
@@ -29,7 +30,7 @@ export default function Home({ pokemon }) {
   return (
     <>
       <Header handleChange={handleChange} />
-
+      <BannerSection pokemon={pokemon} />
       <Pokemon pokemon={filterPokemon(pokemon)} />
     </>
   );
