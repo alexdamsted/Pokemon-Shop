@@ -11,7 +11,7 @@ import Search from "./Search";
 function Header({ handleChange }) {
   return (
     <>
-      <header className="bg-gray-100 py-5">
+      <header className="bg-white py-5 border-b border-gray-300">
         <div className="lg:flex lg:justify-evenly">
           <div className="flex justify-center items-center flex-col sm:flex-row sm:gap-10">
             <HeaderItem title="Home" Icon={HomeIcon} />
