@@ -20,7 +20,12 @@ const Pokemon = ({ pokemon }) => {
           <h1 className="text-center text-2xl font-light">
             {transformFirstLetterUppercase(pokemon.name)}
           </h1>
-          <Image src={getSpriteUrl(pokemon.url)} width="250" height="250" />
+          <Image
+            src={getSpriteUrl(pokemon.url)}
+            alt="pokemon"
+            width="250"
+            height="250"
+          />
         </div>
       ))}
     </main>
