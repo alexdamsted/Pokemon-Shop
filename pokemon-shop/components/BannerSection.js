@@ -15,7 +15,7 @@ const BannerSection = ({ pokemon, inputBox }) => {
       className={`${
         inputBox.inputBox != ""
           ? "hidden"
-          : "flex flex-col justify-center items-center xl:flex-row"
+          : "flex flex-col justify-center items-center pt-40 xl:flex-row xl:p-0"
       }`}
     >
       <GenerationBanner
