@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Pokemon from "../components/Pokemon";
-import Header from "../components/Header";
-import BannerSection from "../components/BannerSection";
+import Pokemon from "../../components/Pokemon";
+import Header from "../../components/Header";
+import BannerSection from "../../components/BannerSection";
 
 export const getStaticProps = async () => {
   const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=2000/");
