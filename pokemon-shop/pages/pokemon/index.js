@@ -18,7 +18,7 @@ export default function Home({ pokemon }) {
   const handleChange = (event) => {
     setInputBox({ inputBox: event.target.value });
   };
-  console.log(InputBox);
+
   const filterPokemon = (pokemon) => {
     return pokemon.results.filter((pokemon) =>
       pokemon.name
