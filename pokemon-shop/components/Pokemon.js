@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Pokemon = ({ pokemon }) => {
   const transformFirstLetterUppercase = (name) => {
@@ -17,9 +18,12 @@ const Pokemon = ({ pokemon }) => {
       {/* this should be a stateful array of all pokemon??? */}
       {pokemon.map((pokemon) => (
         <div className="p-5" key={pokemon.name}>
-          <h1 className="text-center text-2xl font-light">
+          <Link
+            className="text-center text-2xl font-light"
+            href={"/pokemon/" + pokemon.name}
+          >
             {transformFirstLetterUppercase(pokemon.name)}
-          </h1>
+          </Link>
           <Image
             src={getSpriteUrl(pokemon.url)}
             alt="pokemon"
