@@ -18,10 +18,7 @@ const Pokemon = ({ pokemon }) => {
       {/* this should be a stateful array of all pokemon??? */}
       {pokemon.map((pokemon) => (
         <div className="p-5" key={pokemon.name}>
-          <Link
-            className="text-center text-2xl font-light"
-            href={"/pokemon/" + pokemon.name}
-          >
+          <Link className="text-center text-2xl font-light" href={pokemon.name}>
             {transformFirstLetterUppercase(pokemon.name)}
           </Link>
           <Image
