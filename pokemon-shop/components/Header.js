@@ -11,7 +11,7 @@ import Search from "./Search";
 function Header({ handleChange }) {
   return (
     <>
-      <header className="fixed w-full z-50 bg-white py-3 border-b border-gray-300">
+      <header className="fixed w-full z-50 bg-white py-1 border-b border-gray-300">
         <div className="lg:flex lg:justify-evenly">
           <div className="text-center sm:flex sm:justify-center sm:items-center">
             <Logo text="Pokémon Shop" />
