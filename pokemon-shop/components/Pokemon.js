@@ -18,15 +18,19 @@ const Pokemon = ({ pokemon }) => {
       {/* this should be a stateful array of all pokemon??? */}
       {pokemon.map((pokemon) => (
         <div className="p-5" key={pokemon.name}>
-          <Link className="text-center text-2xl font-light" href={pokemon.name}>
-            {transformFirstLetterUppercase(pokemon.name)}
+          <Link href={pokemon.name}>
+            <h1 className="text-center text-2xl font-light">
+              {transformFirstLetterUppercase(pokemon.name)}
+            </h1>
           </Link>
-          <Image
-            src={getSpriteUrl(pokemon.url)}
-            alt="pokemon"
-            width="250"
-            height="250"
-          />
+          <Link href={pokemon.name}>
+            <Image
+              src={getSpriteUrl(pokemon.url)}
+              alt="pokemon"
+              width="250"
+              height="250"
+            />
+          </Link>
         </div>
       ))}
     </main>
