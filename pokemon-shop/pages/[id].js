@@ -26,7 +26,7 @@ const PokemonDetails = ({ pokemon }) => {
   return (
     <div>
       <p>Pokemon Details Page</p>
-      <p>{pokemon.id}</p>
+      <p>{pokemon.name}</p>
     </div>
   );
 };
