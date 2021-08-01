@@ -24,13 +24,15 @@ const Pokemon = ({ pokemon }) => {
             </h1>
           </Link>
           <Link href={pokemon.name}>
-            <Image
-              src={getSpriteUrl(pokemon.url)}
-              alt="pokemon"
-              width="250"
-              height="250"
-              className="hover:cursor-pointer"
-            />
+            <a>
+              <Image
+                src={getSpriteUrl(pokemon.url)}
+                alt="pokemon"
+                width="250"
+                height="250"
+                className="hover:cursor-pointer"
+              />
+            </a>
           </Link>
         </div>
       ))}
