@@ -38,8 +38,12 @@ const PokemonDetails = ({ pokemon }) => {
       <p>{pokemon.name}</p>
       <p>{pokemon.weight + " lbs heavy"}</p>
       <p>{pokemon.height + " feet tall"}</p>
-      <p>Type(s): {pokemon.types.map((types) => types.type.name)}</p>
-      <p>Moves: {pokemon.moves.map((moves) => moves.move.name)}</p>
+      <p>Type(s): {pokemon.types.map((types) => types.type.name + " ")}</p>
+      <p>Moves: {pokemon.moves.map((moves) => moves.move.name + " ")}</p>
+      <p>
+        Stats:{" "}
+        {pokemon.stats.map((moves) => moves.stat.name + moves.base_stat + " ")}
+      </p>
     </div>
   );
 };
