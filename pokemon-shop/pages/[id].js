@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export const getStaticPaths = async () => {
   const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=2000/");
   const pokemonData = await res.json();
@@ -8,7 +10,7 @@ export const getStaticPaths = async () => {
 
   return {
     paths: paths,
-    fallback: false, // Show 404 page when accessing a non-existent route
+    fallback: false, // This is for a 404 page when accessing a non-existent route
   };
 };
 
@@ -26,7 +28,18 @@ const PokemonDetails = ({ pokemon }) => {
   return (
     <div>
       <p>Pokemon Details Page</p>
+      <Image
+        src={pokemon.sprites.front_default}
+        alt={pokemon.name}
+        width="250"
+        height="250"
+      />
+      <p>{"ID: " + pokemon.id}</p>
       <p>{pokemon.name}</p>
+      <p>{pokemon.weight + " lbs heavy"}</p>
+      <p>{pokemon.height + " feet tall"}</p>
+      <p>Type(s): {pokemon.types.map((types) => types.type.name)}</p>
+      <p>Moves: {pokemon.moves.map((moves) => moves.move.name)}</p>
     </div>
   );
 };
