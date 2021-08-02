@@ -26,6 +26,10 @@ export const getStaticProps = async (context) => {
 };
 
 const PokemonDetails = ({ pokemon }) => {
+  const transformFirstLetterUppercase = (name) => {
+    return name[0].toUpperCase() + name.substring(1);
+  };
+
   return (
     <>
       <Header />
@@ -41,13 +45,19 @@ const PokemonDetails = ({ pokemon }) => {
         </div>
 
         <div className="w-1/3">
-          <p>{"ID: " + pokemon.id}</p>
-          <p>{pokemon.name}</p>
-          <p>{pokemon.weight + " lbs heavy"}</p>
-          <p>{pokemon.height + " feet tall"}</p>
-          <p>Type(s): {pokemon.types.map((types) => types.type.name + " ")}</p>
-          <p>Moves: {pokemon.moves.map((moves) => moves.move.name + " ")}</p>
-          <p>
+          {/* <p>{"ID: " + pokemon.id}</p> */}
+          <p className="font-semibold text-2xl">
+            {transformFirstLetterUppercase(pokemon.name)}
+          </p>
+          <p className="font-light">{pokemon.weight + " lbs heavy"}</p>
+          <p className="font-light">{pokemon.height + " feet tall"}</p>
+          <p className="font-light">
+            Type(s): {pokemon.types.map((types) => types.type.name + " ")}
+          </p>
+          <p className="font-light">
+            Moves: {pokemon.moves.map((moves) => moves.move.name + " ")}
+          </p>
+          <p className="font-light">
             Stats:{" "}
             {pokemon.stats.map(
               (moves) => moves.stat.name + moves.base_stat + " "

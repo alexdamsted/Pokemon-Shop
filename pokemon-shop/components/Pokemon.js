@@ -2,15 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Pokemon = ({ pokemon }) => {
-  const transformFirstLetterUppercase = (name) => {
-    name = name[0].toUpperCase() + name.substring(1);
-    return name;
-  };
-
   const getSpriteUrl = (url) => {
     const pokemonIndex = url.split("/")[url.split("/").length - 2];
     const pokemonSpriteUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonIndex}.png`;
     return pokemonSpriteUrl;
+  };
+
+  const transformFirstLetterUppercase = (name) => {
+    return name[0].toUpperCase() + name.substring(1);
   };
 
   return (
