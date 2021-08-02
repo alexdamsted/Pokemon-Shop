@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Header from "../components/Header";
 
 export const getStaticPaths = async () => {
   const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=2000/");
@@ -26,25 +27,35 @@ export const getStaticProps = async (context) => {
 
 const PokemonDetails = ({ pokemon }) => {
   return (
-    <div>
-      <p>Pokemon Details Page</p>
-      <Image
-        src={pokemon.sprites.front_default}
-        alt={pokemon.name}
-        width="250"
-        height="250"
-      />
-      <p>{"ID: " + pokemon.id}</p>
-      <p>{pokemon.name}</p>
-      <p>{pokemon.weight + " lbs heavy"}</p>
-      <p>{pokemon.height + " feet tall"}</p>
-      <p>Type(s): {pokemon.types.map((types) => types.type.name + " ")}</p>
-      <p>Moves: {pokemon.moves.map((moves) => moves.move.name + " ")}</p>
-      <p>
-        Stats:{" "}
-        {pokemon.stats.map((moves) => moves.stat.name + moves.base_stat + " ")}
-      </p>
-    </div>
+    <>
+      <Header />
+      <div className="pt-32 flex items-center justify-center">
+        <div className="flex justify-center w-1/3">
+          <Image
+            src={pokemon.sprites.front_default}
+            alt={pokemon.name}
+            width="500"
+            height="500"
+            className=""
+          />
+        </div>
+
+        <div className="w-1/3">
+          <p>{"ID: " + pokemon.id}</p>
+          <p>{pokemon.name}</p>
+          <p>{pokemon.weight + " lbs heavy"}</p>
+          <p>{pokemon.height + " feet tall"}</p>
+          <p>Type(s): {pokemon.types.map((types) => types.type.name + " ")}</p>
+          <p>Moves: {pokemon.moves.map((moves) => moves.move.name + " ")}</p>
+          <p>
+            Stats:{" "}
+            {pokemon.stats.map(
+              (moves) => moves.stat.name + moves.base_stat + " "
+            )}
+          </p>
+        </div>
+      </div>
+    </>
   );
 };
 
