@@ -33,8 +33,8 @@ const PokemonDetails = ({ pokemon }) => {
   return (
     <>
       <Header />
-      <div className="pt-32 flex items-start justify-center">
-        <div className="flex justify-center w-1/3">
+      <div className="gap-10 pt-32 w-2/3 m-auto flex items-start justify-center">
+        <div className="border border-black w-1/2 flex justify-center">
           <Image
             src={pokemon.sprites.front_default}
             alt={pokemon.name}
@@ -44,12 +44,12 @@ const PokemonDetails = ({ pokemon }) => {
           />
         </div>
 
-        <div className="w-1/3">
+        <div className="w-2/5">
           {/* <p>{"ID: " + pokemon.id}</p> */}
           <p className="font-semibold text-2xl mb-5">
             {transformFirstLetterUppercase(pokemon.name)}
           </p>
-          <button class="w-1/2 bg-green-600 text-white font-light py-2 px-4 inline-flex items-center justify-center transition duration-500 hover:bg-green-500">
+          <button className="w-full bg-green-600 text-white font-light py-2 px-4 inline-flex items-center justify-center transition duration-500 hover:bg-green-500">
             ADD TO BAG
           </button>
 
