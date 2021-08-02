@@ -30,6 +30,11 @@ const PokemonDetails = ({ pokemon }) => {
     return name[0].toUpperCase() + name.substring(1);
   };
 
+  const price = (weight, height) => {
+    const price = height + weight * 50;
+    return price.toLocaleString(); // A dope function for add commas to dynamic numbers
+  };
+
   return (
     <>
       <Header />
@@ -48,6 +53,9 @@ const PokemonDetails = ({ pokemon }) => {
           {/* <p>{"ID: " + pokemon.id}</p> */}
           <p className="font-semibold text-2xl mb-5">
             {transformFirstLetterUppercase(pokemon.name)}
+          </p>
+          <p className="font-semibold text-2xl mb-5">
+            ${price(pokemon.weight, pokemon.height)}
           </p>
           <button className="w-full bg-green-600 text-white font-light py-2 px-4 inline-flex items-center justify-center transition duration-500 hover:bg-green-500">
             ADD TO BAG
