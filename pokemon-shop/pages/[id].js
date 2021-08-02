@@ -33,7 +33,7 @@ const PokemonDetails = ({ pokemon }) => {
   return (
     <>
       <Header />
-      <div className="pt-32 flex items-center justify-center">
+      <div className="pt-32 flex items-start justify-center">
         <div className="flex justify-center w-1/3">
           <Image
             src={pokemon.sprites.front_default}
@@ -46,23 +46,31 @@ const PokemonDetails = ({ pokemon }) => {
 
         <div className="w-1/3">
           {/* <p>{"ID: " + pokemon.id}</p> */}
-          <p className="font-semibold text-2xl">
+          <p className="font-semibold text-2xl mb-5">
             {transformFirstLetterUppercase(pokemon.name)}
           </p>
-          <p className="font-light">{pokemon.weight + " lbs heavy"}</p>
-          <p className="font-light">{pokemon.height + " feet tall"}</p>
-          <p className="font-light">
-            Type(s): {pokemon.types.map((types) => types.type.name + " ")}
-          </p>
-          <p className="font-light">
-            Moves: {pokemon.moves.map((moves) => moves.move.name + " ")}
-          </p>
-          <p className="font-light">
-            Stats:{" "}
-            {pokemon.stats.map(
+          <button class="w-1/2 bg-green-600 text-white font-light py-2 px-4 inline-flex items-center justify-center transition duration-500 hover:bg-green-500">
+            ADD TO BAG
+          </button>
+
+          <div className="mt-20">
+            <p className="font-light">
+              Type(s)
+              {/* {pokemon.types.map((types) => types.type.name + " ")} */}
+            </p>
+            <p className="font-light">
+              Moves
+              {/* {pokemon.moves.map((moves) => moves.move.name + " ")} */}
+            </p>
+            <p className="font-light">
+              Stats
+              {/* {pokemon.stats.map(
               (moves) => moves.stat.name + moves.base_stat + " "
-            )}
-          </p>
+            )} */}
+            </p>
+            <p className="font-light mt-5">{pokemon.weight + " lbs heavy"}</p>
+            <p className="font-light">{pokemon.height + " feet tall"}</p>
+          </div>
         </div>
       </div>
     </>
