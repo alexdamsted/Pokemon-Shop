@@ -22,6 +22,7 @@ const Pokemon = ({ pokemon }) => {
               {transformFirstLetterUppercase(pokemon.name)}
             </h1>
           </Link>
+
           <Link href={pokemon.name}>
             <a>
               <Image

@@ -40,13 +40,17 @@ const PokemonDetails = ({ pokemon }) => {
       <Header />
       <div className="gap-10 pt-32 w-2/3 m-auto flex items-start justify-center">
         <div className="border border-black w-1/2 flex justify-center">
-          <Image
-            src={pokemon.sprites.front_default}
-            alt={pokemon.name}
-            width="500"
-            height="500"
-            className=""
-          />
+          {pokemon.sprites.front_default ? (
+            <Image
+              src={pokemon.sprites.front_default}
+              alt={pokemon.name}
+              width="500"
+              height="500"
+              className=""
+            />
+          ) : (
+            <p>No Image</p>
+          )}
         </div>
 
         <div className="w-2/5">
