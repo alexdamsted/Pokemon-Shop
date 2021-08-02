@@ -35,6 +35,18 @@ const PokemonDetails = ({ pokemon }) => {
     return price.toLocaleString(); // A dope function for adding commas to dynamic numbers
   };
 
+  const formatTypes = (pokemon) => {
+    let types = pokemon.types.map(
+      (types) => transformFirstLetterUppercase(types.type.name) + ", "
+    );
+    const lastType = types.pop();
+    const lastTypeWithoutComma = lastType.substring(0, lastType.length - 2);
+    types.push(lastTypeWithoutComma);
+    types.splice(types.length, 0, ".");
+
+    return types;
+  };
+
   return (
     <>
       <Header />
@@ -58,11 +70,7 @@ const PokemonDetails = ({ pokemon }) => {
           <p className="font-semibold text-2xl ">
             {transformFirstLetterUppercase(pokemon.name)}
           </p>
-          <p className="font-light mb-5">
-            {pokemon.types.map((types) =>
-              transformFirstLetterUppercase(types.type.name)
-            )}
-          </p>
+          <p className="font-light mb-5">{formatTypes(pokemon)}</p>
           <p className="font-semibold text-2xl mb-5">
             ${price(pokemon.weight, pokemon.height)}
           </p>
