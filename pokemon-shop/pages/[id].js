@@ -55,8 +55,13 @@ const PokemonDetails = ({ pokemon }) => {
 
         <div className="w-2/5">
           {/* <p>{"ID: " + pokemon.id}</p> */}
-          <p className="font-semibold text-2xl mb-5">
+          <p className="font-semibold text-2xl ">
             {transformFirstLetterUppercase(pokemon.name)}
+          </p>
+          <p className="font-light mb-5">
+            {pokemon.types.map((types) =>
+              transformFirstLetterUppercase(types.type.name)
+            )}
           </p>
           <p className="font-semibold text-2xl mb-5">
             ${price(pokemon.weight, pokemon.height)}
@@ -66,10 +71,6 @@ const PokemonDetails = ({ pokemon }) => {
           </button>
 
           <div className="mt-20">
-            <p className="font-light">
-              Type(s)
-              {/* {pokemon.types.map((types) => types.type.name + " ")} */}
-            </p>
             <p className="font-light">
               Moves
               {/* {pokemon.moves.map((moves) => moves.move.name + " ")} */}
