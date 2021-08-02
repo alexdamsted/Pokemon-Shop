@@ -38,15 +38,15 @@ const PokemonDetails = ({ pokemon }) => {
   return (
     <>
       <Header />
-      <div className="gap-10 pt-32 w-2/3 m-auto flex items-start justify-center">
-        <div className="border border-black w-1/2 flex justify-center">
+      <div className="gap-10 pt-32 w-2/3 m-auto flex items-center justify-center">
+        <div className="w-1/2 flex justify-center">
           {pokemon.sprites.front_default ? (
             <Image
               src={pokemon.sprites.front_default}
               alt={pokemon.name}
-              width="500"
-              height="500"
-              className=""
+              width="300"
+              height="300"
+              quality="100"
             />
           ) : (
             <p>No Image</p>
