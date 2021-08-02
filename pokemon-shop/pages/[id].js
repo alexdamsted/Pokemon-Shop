@@ -32,7 +32,7 @@ const PokemonDetails = ({ pokemon }) => {
 
   const price = (weight, height) => {
     const price = height + weight * 50;
-    return price.toLocaleString(); // A dope function for add commas to dynamic numbers
+    return price.toLocaleString(); // A dope function for adding commas to dynamic numbers
   };
 
   return (
