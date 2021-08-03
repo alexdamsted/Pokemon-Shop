@@ -84,6 +84,7 @@ const PokemonDetails = ({ pokemon }) => {
           <div className="mt-20">
             <p
               onClick={() => setIsToggleOn((prevIsToggleOn) => !prevIsToggleOn)}
+              className="cursor-pointer"
             >
               Moves
             </p>
