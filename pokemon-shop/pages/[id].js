@@ -87,7 +87,7 @@ const PokemonDetails = ({ pokemon }) => {
             >
               Moves
             </p>
-            <p className="font-light hidden">
+            <p className={isToggleOn ? "font-light" : "font-light hidden"}>
               {pokemon.moves.map((moves) => moves.move.name + " ")}
             </p>
             <p className="font-light">
