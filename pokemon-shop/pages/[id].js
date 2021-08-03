@@ -101,7 +101,9 @@ const PokemonDetails = ({ pokemon }) => {
             </p>
             <ul className={isToggleOn ? "font-light" : "font-light hidden"}>
               {pokemon.moves.map((moves) => (
-                <li>{transformFirstLetterUppercase(moves.move.name)}</li>
+                <li key={moves.move.name}>
+                  {transformFirstLetterUppercase(moves.move.name)}
+                </li>
               ))}
             </ul>
           </div>
