@@ -23,7 +23,7 @@ const Pokemon = ({ pokemon }) => {
             </h1>
           </Link>
 
-          <Link href={pokemon.name}>
+          <Link href={pokemon.name} passHref>
             <a>
               <Image
                 src={getSpriteUrl(pokemon.url)}
