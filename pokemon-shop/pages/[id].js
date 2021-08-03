@@ -50,6 +50,36 @@ const PokemonDetails = ({ pokemon }) => {
     return types;
   };
 
+  // Calculate bg-blue width of each Pokemons' stats' progress bar
+  const statsWidth = (stat) => {
+    let width = stat / 255; // 255 is maximum stat possible of any given stat
+    if (width < 0.083) {
+      return "w-1/12";
+    } else if (width <= 0.166) {
+      return "w-2/12";
+    } else if (width <= 0.25) {
+      return "w-3/12";
+    } else if (width <= 0.333) {
+      return "w-4/12";
+    } else if (width <= 0.416) {
+      return "w-5/12";
+    } else if (width <= 0.5) {
+      return "w-6/12";
+    } else if (width <= 0.583) {
+      return "w-7/12";
+    } else if (width <= 0.666) {
+      return "w-8/12";
+    } else if (width <= 0.75) {
+      return "w-9/12";
+    } else if (width <= 0.833) {
+      return "w-10/12";
+    } else if (width <= 0.916) {
+      return "w-11/12";
+    } else if (width <= 1) {
+      return "w-12/12";
+    }
+  };
+
   return (
     <>
       <Header />
@@ -120,7 +150,11 @@ const PokemonDetails = ({ pokemon }) => {
               <>
                 <p>{transformFirstLetterUppercase(moves.stat.name)}</p>
                 <div className="w-full bg-gray-100 mb-5">
-                  <div className="w-1/2 bg-blue-500 text-sm text-white font-light py-1 text-center">
+                  <div
+                    className={`${statsWidth(
+                      moves.base_stat
+                    )} bg-blue-500 text-sm text-white font-light py-1 text-center`}
+                  >
                     {moves.base_stat}
                   </div>
                 </div>
