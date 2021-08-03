@@ -53,8 +53,8 @@ const PokemonDetails = ({ pokemon }) => {
   return (
     <>
       <Header />
-      <div className="gap-10 pt-32 w-2/3 m-auto flex items-center justify-center">
-        <div className="w-1/2 flex justify-center">
+      <div className="gap-10 pt-32 w-2/3 m-auto flex items-start justify-center">
+        <div className="w-1/2 flex items-center justify-center">
           {pokemon.sprites.front_default ? (
             <Image
               src={pokemon.sprites.front_default}
@@ -87,7 +87,7 @@ const PokemonDetails = ({ pokemon }) => {
             >
               Moves
             </p>
-            <p className={isToggleOn ? "font-light" : "font-light hidden"}>
+            <p className={isToggleOn ? "font-light" : "font-light hidden "}>
               {pokemon.moves.map((moves) => moves.move.name + " ")}
             </p>
             <p className="font-light">
