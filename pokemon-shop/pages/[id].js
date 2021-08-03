@@ -74,23 +74,17 @@ const PokemonDetails = ({ pokemon }) => {
             {transformFirstLetterUppercase(pokemon.name)}
           </p>
           <p className="font-light mb-5">{formatTypes(pokemon)}</p>
-          <p className="font-semibold text-2xl mb-5">
+          <p className="font-semibold text-xl mb-5">
             ${price(pokemon.weight, pokemon.height)}
           </p>
           <button className="w-full bg-green-600 text-white font-light py-2 px-4 inline-flex items-center justify-center transition duration-500 hover:bg-green-500">
             ADD TO BAG
           </button>
 
-          <div className="mt-20">
-            <p className="font-light">
-              Stats
-              {/* {pokemon.stats.map(
-              (moves) => moves.stat.name + moves.base_stat + " "
-            )} */}
-            </p>
+          <div className="mt-10">
             <p
               onClick={() => setIsToggleOn((prevIsToggleOn) => !prevIsToggleOn)}
-              className="inline-flex items-center justify-center cursor-pointer"
+              className="mb-5 inline-flex items-center justify-center cursor-pointer"
             >
               Moves
               <svg
@@ -105,15 +99,31 @@ const PokemonDetails = ({ pokemon }) => {
                 <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />{" "}
               </svg>
             </p>
-
             <ul className={isToggleOn ? "font-light" : "font-light hidden"}>
               {pokemon.moves.map((moves) => (
                 <li>{transformFirstLetterUppercase(moves.move.name)}</li>
               ))}
             </ul>
+          </div>
+          <div className="border-b"></div>
 
-            <p className="font-light mt-5">{pokemon.weight + " lbs heavy"}</p>
-            <p className="font-light">{pokemon.height + " feet tall"}</p>
+          <p className="font-light mt-5">Weight (lbs) - {pokemon.weight}</p>
+          <div className="border-b mt-5"></div>
+
+          <p className="font-light mt-5">Height (ft) - {pokemon.height}</p>
+          <div className="border-b mt-5"></div>
+
+          <div className="mt-5 mb-10 font-light">
+            {pokemon.stats.map((moves) => (
+              <>
+                <p>{transformFirstLetterUppercase(moves.stat.name)}</p>
+                <div className="w-full bg-gray-100 mb-5">
+                  <div className="w-1/2 bg-blue-500 text-sm text-white font-light py-1 text-center">
+                    {moves.base_stat}
+                  </div>
+                </div>
+              </>
+            ))}
           </div>
         </div>
       </div>
