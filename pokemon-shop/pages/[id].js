@@ -82,13 +82,23 @@ const PokemonDetails = ({ pokemon }) => {
           </button>
 
           <div className="mt-20">
+            <p className="font-light">
+              Stats
+              {/* {pokemon.stats.map(
+              (moves) => moves.stat.name + moves.base_stat + " "
+            )} */}
+            </p>
             <p
               onClick={() => setIsToggleOn((prevIsToggleOn) => !prevIsToggleOn)}
               className="inline-flex items-center justify-center cursor-pointer"
             >
               Moves
               <svg
-                className="fill-current h-4 w-4"
+                className={
+                  isToggleOn
+                    ? "ml-1 fill-current h-4 w-4 rotate-180"
+                    : "ml-1 fill-current h-4 w-4 rotate-0"
+                }
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
               >
@@ -98,15 +108,10 @@ const PokemonDetails = ({ pokemon }) => {
 
             <ul className={isToggleOn ? "font-light" : "font-light hidden"}>
               {pokemon.moves.map((moves) => (
-                <li>{moves.move.name}</li>
+                <li>{transformFirstLetterUppercase(moves.move.name)}</li>
               ))}
             </ul>
-            <p className="font-light">
-              Stats
-              {/* {pokemon.stats.map(
-              (moves) => moves.stat.name + moves.base_stat + " "
-            )} */}
-            </p>
+
             <p className="font-light mt-5">{pokemon.weight + " lbs heavy"}</p>
             <p className="font-light">{pokemon.height + " feet tall"}</p>
           </div>
