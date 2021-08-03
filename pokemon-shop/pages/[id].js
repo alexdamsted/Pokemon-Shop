@@ -83,8 +83,8 @@ const PokemonDetails = ({ pokemon }) => {
   return (
     <>
       <Header />
-      <div className="gap-10 pt-32 w-2/3 m-auto flex items-start justify-center">
-        <div className="w-1/2 flex items-center justify-center">
+      <div className="flex flex-col items-center justify-center pt-72 xl:pt-32 xl:w-2/3 xl:m-auto xl:flex xl:flex-row xl:items-start xl:justify-center">
+        <div className="xl:w-1/2 xl:flex xl:items-center xl:justify-center">
           {pokemon.sprites.front_default ? (
             <Image
               src={pokemon.sprites.front_default}
@@ -98,7 +98,7 @@ const PokemonDetails = ({ pokemon }) => {
           )}
         </div>
 
-        <div className="w-2/5">
+        <div className="w-2/3 xl:w-2/5">
           {/* <p>{"ID: " + pokemon.id}</p> */}
           <p className="font-semibold text-2xl ">
             {transformFirstLetterUppercase(pokemon.name)}
