@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Image from "next/image";
 import Header from "../components/Header";
 
@@ -26,6 +27,8 @@ export const getStaticProps = async (context) => {
 };
 
 const PokemonDetails = ({ pokemon }) => {
+  const [isToggleOn, setIsToggleOn] = useState(false);
+
   const transformFirstLetterUppercase = (name) => {
     return name[0].toUpperCase() + name.substring(1);
   };
@@ -79,9 +82,13 @@ const PokemonDetails = ({ pokemon }) => {
           </button>
 
           <div className="mt-20">
-            <p className="font-light">
+            <p
+              onClick={() => setIsToggleOn((prevIsToggleOn) => !prevIsToggleOn)}
+            >
               Moves
-              {/* {pokemon.moves.map((moves) => moves.move.name + " ")} */}
+            </p>
+            <p className="font-light hidden">
+              {pokemon.moves.map((moves) => moves.move.name + " ")}
             </p>
             <p className="font-light">
               Stats
