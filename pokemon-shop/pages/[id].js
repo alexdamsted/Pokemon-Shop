@@ -84,10 +84,18 @@ const PokemonDetails = ({ pokemon }) => {
           <div className="mt-20">
             <p
               onClick={() => setIsToggleOn((prevIsToggleOn) => !prevIsToggleOn)}
-              className="cursor-pointer"
+              className="inline-flex items-center justify-center cursor-pointer"
             >
               Moves
+              <svg
+                class="fill-current h-4 w-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />{" "}
+              </svg>
             </p>
+
             <p className={isToggleOn ? "font-light" : "font-light hidden "}>
               {pokemon.moves.map((moves) => moves.move.name + " ")}
             </p>
