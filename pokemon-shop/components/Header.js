@@ -9,7 +9,7 @@ import HeaderItem from "./HeaderItem";
 import Logo from "./Logo";
 import Search from "./Search";
 
-function Header({ handleChange }) {
+function Header({ handleChange, handleCartClick }) {
   return (
     <header className="fixed w-full z-50">
       <div className="py-4 px-8 2xl:flex 2xl:justify-between bg-white border-b border-gray-300">
@@ -25,7 +25,11 @@ function Header({ handleChange }) {
             />
           </div>
           <div className="flex justify-center items-center flex-col mt-4 lg:flex-row lg:gap-8 2xl:m-0">
-            <HeaderItem title="MY BAG" Icon={ShoppingBagIcon} />
+            <HeaderItem
+              title="MY BAG"
+              Icon={ShoppingBagIcon}
+              handleCartClick={handleCartClick}
+            />
             <HeaderItem title="SAVED ITEMS" Icon={HeartIcon} />
             <HeaderItem title="SIGN IN / REGISTER" Icon={UserCircleIcon} />
           </div>
