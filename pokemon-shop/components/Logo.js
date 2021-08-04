@@ -11,7 +11,9 @@ function Logo({ text }) {
       </Link>
 
       <Link href="/" passHref>
-        <h1 className="text-black text-2xl font-bold md:m-0">{text}</h1>
+        <h1 className="text-black text-lg font-montserrat font-semibold md:m-0">
+          {text}
+        </h1>
       </Link>
     </div>
   );
