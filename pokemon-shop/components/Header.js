@@ -4,7 +4,7 @@ import {
   SearchIcon,
   HeartIcon,
   UserCircleIcon,
-} from "@heroicons/react/outline";
+} from "@heroicons/react/solid";
 import HeaderItem from "./HeaderItem";
 import Logo from "./Logo";
 import Search from "./Search";
@@ -17,7 +17,7 @@ function Header({ handleChange }) {
           <Logo text="Pokémon Shop" />
         </div>
         <div className="2xl:flex 2xl:justify-end">
-          <div className="2xl:mr-10">
+          <div className="flex justify-center 2xl:mr-10">
             <Search
               handleChange={handleChange}
               Icon={SearchIcon}
