@@ -3,6 +3,7 @@ import {
   ShoppingBagIcon,
   SearchIcon,
   HeartIcon,
+  UserCircleIcon,
 } from "@heroicons/react/outline";
 import HeaderItem from "./HeaderItem";
 import Logo from "./Logo";
@@ -24,9 +25,9 @@ function Header({ handleChange }) {
             />
           </div>
           <div className="flex justify-center items-center flex-col my-4 sm:flex-row sm:gap-8 sm:m-0">
-            {/* <HeaderItem title="HOME" Icon={HomeIcon} /> */}
             <HeaderItem title="MY BAG" Icon={ShoppingBagIcon} />
             <HeaderItem title="SAVED ITEMS" Icon={HeartIcon} />
+            <HeaderItem title="SIGN IN / REGISTER" Icon={UserCircleIcon} />
           </div>
         </div>
       </header>
