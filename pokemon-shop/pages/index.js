@@ -17,9 +17,9 @@ export default function Home({ pokemon }) {
   const [InputBox, setInputBox] = useState({ inputBox: [] });
   const [isCartClicked, setIsCartClicked] = useState(false);
 
-  const handleCartClick = (event) => {
-    setIsCartClicked(!isCartClicked);
+  const handleCartClick = () => {
     console.log(isCartClicked);
+    setIsCartClicked(!isCartClicked);
   };
 
   const handleChange = (event) => {
@@ -37,7 +37,7 @@ export default function Home({ pokemon }) {
   return (
     <>
       <Header handleChange={handleChange} handleCartClick={handleCartClick} />
-      <Bag />
+      <Bag isCartClicked={isCartClicked} />
       <Hero pokemon={pokemon} inputBox={InputBox} />
       <Pokemon pokemon={filterPokemon(pokemon)} />
     </>
