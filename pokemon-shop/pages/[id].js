@@ -148,7 +148,9 @@ const PokemonDetails = ({ pokemon }) => {
           <div className="mt-5 mb-10 font-light">
             {pokemon.stats.map((moves) => (
               <>
-                <p>{transformFirstLetterUppercase(moves.stat.name)}</p>
+                <p key={moves.stat.name}>
+                  {transformFirstLetterUppercase(moves.stat.name)}
+                </p>
                 <div className="w-full bg-gray-100 mb-5">
                   <div
                     className={`${statsWidth(
