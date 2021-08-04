@@ -1,10 +1,10 @@
 function Search({ handleChange, Icon, placeholder }) {
   return (
-    <div className="bg-gray-200 flex justify-center items-center">
+    <div className="bg-gray-200 flex items-center">
       <input
         type="text"
-        className="font-opensans font-normal bg-gray-200 text-center text-base
-        py-2 z-0 focus:outline-none md: px-10 placeholder-gray-700 text-gray-700"
+        className="text-left font-opensans font-normal bg-gray-200 text-base
+        py-2 px-4 w-full z-0 focus:outline-none placeholder-gray-700 text-gray-700"
         placeholder={placeholder}
         onChange={handleChange}
       />
