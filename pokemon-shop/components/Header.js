@@ -31,7 +31,7 @@ function Header({ handleChange }) {
           </div>
         </div>
       </div>
-      <div className="flex justify-between items-center px-20 bg-white w-full py-3 border-b border-gray-300">
+      <div className="hidden px-20 bg-white w-full py-3 border-b border-gray-300 xl:flex xl:justify-between xl:items-center">
         <p className="font-montserrat font-bold text-xs text-gray-500 cursor-pointer transition ease-in-out duration-300 hover:text-blue-600">
           NEW RELEASES
         </p>
