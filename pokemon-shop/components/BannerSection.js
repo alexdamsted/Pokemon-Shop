@@ -1,4 +1,4 @@
-import GenerationBanner from "./GenerationBanner";
+import Image from "next/image";
 
 const BannerSection = ({ pokemon, inputBox }) => {
   const getPokemonByName = (pokemon, name) => {
@@ -15,26 +15,13 @@ const BannerSection = ({ pokemon, inputBox }) => {
       className={`${
         inputBox.inputBox != ""
           ? "hidden"
-          : "flex flex-col justify-center items-center pt-40 xl:flex-row xl:p-0"
+          : "hidden lg:flex relative pt-40 xl:pt-52 2xl:pt-28"
       }`}
     >
-      <GenerationBanner
-        title={"BROWSE GENERATION 1"}
-        bannerImage="/city-center.jpeg"
-        bannerPokemon={getPokemonByName(pokemon, "charizard")} // Be precise here!
-        textBgColor="bg-white"
-      />
-      <GenerationBanner
-        title={"BROWSE GENERATION 2"}
-        bannerImage="/futuristic-alley.jpeg"
-        bannerPokemon={getPokemonByName(pokemon, "meganium")} // Be precise here!
-        textBgColor="bg-white"
-      />
-      <GenerationBanner
-        title={"BROWSE GENERATION 3"}
-        bannerImage="/old-alley-cloudy.jpeg"
-        bannerPokemon={getPokemonByName(pokemon, "swampert")} // Be precise here!
-        textBgColor="bg-white"
+      <img
+        src="/pokemon-shop-banner.jpeg"
+        alt="banner image"
+        className="w-screen h-full"
       />
     </div>
   );
