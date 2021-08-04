@@ -21,7 +21,7 @@ function Header({ handleChange }) {
             <Search
               handleChange={handleChange}
               Icon={SearchIcon}
-              placeholder="Pokémon Search..."
+              placeholder="Find a Pokémon..."
             />
           </div>
           <div className="flex justify-center items-center flex-col mt-4 lg:flex-row lg:gap-8 2xl:m-0">
