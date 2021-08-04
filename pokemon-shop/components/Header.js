@@ -11,8 +11,8 @@ import Search from "./Search";
 
 function Header({ handleChange }) {
   return (
-    <>
-      <header className="py-4 px-8 2xl:flex 2xl:justify-between fixed w-full z-50 bg-white border-b border-gray-300">
+    <header className="fixed w-full z-50">
+      <div className="py-4 px-8 2xl:flex 2xl:justify-between bg-white border-b border-gray-300">
         <div className="flex justify-center mb-4 2xl:m-0">
           <Logo text="Pokémon Shop" />
         </div>
@@ -30,8 +30,28 @@ function Header({ handleChange }) {
             <HeaderItem title="SIGN IN / REGISTER" Icon={UserCircleIcon} />
           </div>
         </div>
-      </header>
-    </>
+      </div>
+      <div className="flex justify-between items-center px-20 bg-white w-full py-3 border-b border-gray-300">
+        <p className="font-montserrat font-bold text-xs text-gray-500 cursor-pointer transition ease-in-out duration-300 hover:text-blue-600">
+          NEW RELEASES
+        </p>
+        <p className="font-montserrat font-bold text-xs text-gray-500 cursor-pointer transition ease-in-out duration-300 hover:text-blue-600">
+          FIRST GENERATION
+        </p>
+        <p className="font-montserrat font-bold text-xs text-gray-500 cursor-pointer transition ease-in-out duration-300 hover:text-blue-600">
+          STRONGEST
+        </p>
+        <p className="font-montserrat font-bold text-xs text-gray-500 cursor-pointer transition ease-in-out duration-300 hover:text-blue-600">
+          FASTEST
+        </p>
+        <p className="font-montserrat font-bold text-xs text-gray-500 cursor-pointer transition ease-in-out duration-300 hover:text-blue-600">
+          LEGENDARY Pokémon
+        </p>
+        <p className="font-montserrat font-bold text-xs text-gray-500 cursor-pointer transition ease-in-out duration-300 hover:text-blue-600">
+          SHINY Pokémon
+        </p>
+      </div>
+    </header>
   );
 }
 
