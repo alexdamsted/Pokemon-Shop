@@ -15,13 +15,14 @@ const Hero = ({ pokemon, inputBox }) => {
       className={`${
         inputBox.inputBox != ""
           ? "hidden"
-          : "hidden lg:flex relative pt-40 xl:pt-52 2xl:pt-28"
+          : "hidden relative lg:flex pt-40 xl:pt-52 2xl:pt-28"
       }`}
     >
-      <img
+      <Image
         src="/pokemon-shop-banner.jpeg"
         alt="banner image"
-        className="w-screen h-full"
+        width="3000"
+        height="1100"
       />
     </div>
   );
