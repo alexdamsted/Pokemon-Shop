@@ -3,7 +3,7 @@ function Search({ handleChange, Icon, placeholder }) {
     <div className="bg-gray-200 flex items-center">
       <input
         type="text"
-        className="text-left font-opensans font-normal bg-gray-200 text-base
+        className="text-left font-opensans font-normal bg-gray-200 text-sm
         py-2 px-4 w-full z-0 focus:outline-none placeholder-gray-700 text-gray-700"
         placeholder={placeholder}
         onChange={handleChange}
