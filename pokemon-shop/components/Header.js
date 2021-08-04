@@ -5,9 +5,11 @@ import {
   HeartIcon,
   UserCircleIcon,
 } from "@heroicons/react/solid";
-import HeaderItem from "./HeaderItem";
 import Logo from "./Logo";
 import Search from "./Search";
+import BagHeaderItem from "./Header_Items/BagHeaderItem";
+import SavedHeaderItem from "./Header_Items/SavedHeaderItem";
+import AccountHeaderItem from "./Header_Items/AccountHeaderItem";
 
 function Header({ handleChange, handleCartClick }) {
   return (
@@ -25,13 +27,16 @@ function Header({ handleChange, handleCartClick }) {
             />
           </div>
           <div className="flex justify-center items-center flex-col mt-4 lg:flex-row lg:gap-8 2xl:m-0">
-            <HeaderItem
+            <BagHeaderItem
               title="MY BAG"
               Icon={ShoppingBagIcon}
               handleCartClick={handleCartClick}
             />
-            <HeaderItem title="SAVED ITEMS" Icon={HeartIcon} />
-            <HeaderItem title="SIGN IN / REGISTER" Icon={UserCircleIcon} />
+            <SavedHeaderItem title="SAVED ITEMS" Icon={HeartIcon} />
+            <AccountHeaderItem
+              title="SIGN IN / REGISTER"
+              Icon={UserCircleIcon}
+            />
           </div>
         </div>
       </div>
