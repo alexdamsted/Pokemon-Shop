@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const BannerSection = ({ pokemon, inputBox }) => {
+const Hero = ({ pokemon, inputBox }) => {
   const getPokemonByName = (pokemon, name) => {
     const bannerPokemon = pokemon.results.filter((pokemon) =>
       pokemon.name.includes(name)
@@ -27,4 +27,4 @@ const BannerSection = ({ pokemon, inputBox }) => {
   );
 };
 
-export default BannerSection;
+export default Hero;
