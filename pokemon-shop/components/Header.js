@@ -13,8 +13,8 @@ function Header({ handleChange }) {
   return (
     <>
       <header className="fixed w-full z-50 bg-white py-4 border-b border-gray-300">
-        <div className="xl:flex xl:justify-evenly">
-          <div className="flex justify-center items-center py-5 xl:p-0">
+        <div className="2xl:flex 2xl:justify-around">
+          <div className="flex justify-center items-center py-5 2xl:p-0">
             <Logo text="Pokémon Shop" />
           </div>
           <div className="flex justify-center">
