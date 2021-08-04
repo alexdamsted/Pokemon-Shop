@@ -1,5 +1,5 @@
 const Bag = () => {
-  return <div></div>;
+  return <div className="hidden">Hi</div>;
 };
 
 export default Bag;
