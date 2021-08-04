@@ -3,7 +3,7 @@ import Link from "next/link";
 
 function Logo({ text }) {
   return (
-    <div className="flex gap-1 hover:cursor-pointer">
+    <div className="flex gap-2 hover:cursor-pointer">
       <Link href="/" passHref>
         <a className="flex items-center">
           <Image src="/pokeball-48.png" alt="pokeball" width="48" height="48" />
