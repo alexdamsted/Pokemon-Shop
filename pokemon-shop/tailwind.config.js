@@ -6,7 +6,10 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    fontFamily: { sans: ["Helvetica", "Arial", "sans-serif"] },
+    fontFamily: {
+      montserrat: ["Montserrat", "sans-serif"],
+      opensans: ["Open Sans", "sans-serif"],
+    },
     extend: {},
   },
   variants: {
