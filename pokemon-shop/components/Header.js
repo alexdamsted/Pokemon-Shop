@@ -13,7 +13,7 @@ import AccountHeaderItem from "./Header_Items/AccountHeaderItem";
 
 function Header({ handleChange, handleCartClick }) {
   return (
-    <header className="fixed w-full z-50">
+    <header className="fixed w-full z-40">
       <div className="py-4 px-8 2xl:flex 2xl:justify-between bg-white border-b border-gray-300">
         <div className="flex justify-center mb-4 2xl:m-0">
           <Logo text="Pokémon Shop" />
