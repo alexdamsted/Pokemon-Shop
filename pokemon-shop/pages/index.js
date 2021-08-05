@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Pokemon from "../components/Pokemon";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
@@ -13,34 +12,19 @@ export const getStaticProps = async () => {
   };
 };
 
-export default function Home({ pokemon }) {
-  const [InputBox, setInputBox] = useState({ inputBox: [] });
-  const [isCartClicked, setIsCartClicked] = useState(false);
-
-  const handleCartClick = () => {
-    console.log(isCartClicked);
-    setIsCartClicked(!isCartClicked);
-  };
-
-  const handleChange = (event) => {
-    setInputBox({ inputBox: event.target.value });
-  };
-
-  const filterPokemon = (pokemon) => {
-    return pokemon.results.filter((pokemon) =>
-      pokemon.name
-        .toLowerCase()
-        .includes(InputBox.inputBox.toString().toLowerCase())
-    );
-  };
-
-  const addToCart = (pokemon) => {};
-
+export default function Home({
+  pokemon,
+  inputBox,
+  isCartClicked,
+  handleCartClick,
+  handleChange,
+  filterPokemon,
+}) {
   return (
     <>
       <Header handleChange={handleChange} handleCartClick={handleCartClick} />
       <Bag isCartClicked={isCartClicked} handleCartClick={handleCartClick} />
-      <Hero pokemon={pokemon} inputBox={InputBox} />
+      <Hero pokemon={pokemon} inputBox={inputBox} />
       <Pokemon pokemon={filterPokemon(pokemon)} />
     </>
   );
