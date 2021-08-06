@@ -33,6 +33,7 @@ const PokemonDetails = ({
   isCartClicked,
   handleCartClick,
   addToBag,
+  bagItems,
 }) => {
   const [isToggleOn, setIsToggleOn] = useState(false);
 
@@ -90,7 +91,11 @@ const PokemonDetails = ({
   return (
     <>
       <Header handleChange={handleChange} handleCartClick={handleCartClick} />
-      <Bag isCartClicked={isCartClicked} handleCartClick={handleCartClick} />
+      <Bag
+        bagItems={bagItems}
+        isCartClicked={isCartClicked}
+        handleCartClick={handleCartClick}
+      />
       <div className="flex flex-col items-center justify-center pt-72 2xl:pt-32 2xl:w-2/3 2xl:m-auto 2xl:flex 2xl:flex-row 2xl:items-start 2xl:justify-center">
         <div className="2xl:w-1/2 2xl:flex 2xl:items-center 2xl:justify-center">
           {pokemon.sprites.front_default ? (

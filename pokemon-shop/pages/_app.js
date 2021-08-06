@@ -45,6 +45,7 @@ function MyApp({ Component, pageProps }) {
       handleChange={handleChange}
       filterPokemon={filterPokemon}
       addToBag={addToBag}
+      bagItems={bagItems}
     />
   );
 }
