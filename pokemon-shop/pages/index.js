@@ -19,11 +19,16 @@ export default function Home({
   handleCartClick,
   handleChange,
   filterPokemon,
+  bagItems,
 }) {
   return (
     <>
       <Header handleChange={handleChange} handleCartClick={handleCartClick} />
-      <Bag isCartClicked={isCartClicked} handleCartClick={handleCartClick} />
+      <Bag
+        bagItems={bagItems}
+        isCartClicked={isCartClicked}
+        handleCartClick={handleCartClick}
+      />
       <Hero pokemon={pokemon} inputBox={inputBox} />
       <Pokemon pokemon={filterPokemon(pokemon)} />
     </>
