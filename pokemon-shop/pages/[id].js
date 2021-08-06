@@ -32,6 +32,7 @@ const PokemonDetails = ({
   handleChange,
   isCartClicked,
   handleCartClick,
+  addToBag,
 }) => {
   const [isToggleOn, setIsToggleOn] = useState(false);
 
@@ -114,7 +115,10 @@ const PokemonDetails = ({
           <p className="font-semibold text-xl mb-5">
             ${price(pokemon.weight, pokemon.height)}
           </p>
-          <button className="w-full bg-green-600 text-white font-light py-2 px-4 inline-flex items-center justify-center transition duration-500 hover:bg-green-500">
+          <button
+            onClick={() => addToBag(pokemon, price, formatTypes)}
+            className="w-full bg-green-600 text-white font-light py-2 px-4 inline-flex items-center justify-center transition duration-500 hover:bg-green-500"
+          >
             ADD TO BAG
           </button>
 
