@@ -24,15 +24,22 @@ export default function Home({
 }) {
   return (
     <>
-      <Header handleChange={handleChange} handleCartClick={handleCartClick} />
       <Bag
         bagItems={bagItems}
         removeItemFromBag={removeItemFromBag}
         isCartClicked={isCartClicked}
         handleCartClick={handleCartClick}
       />
-      <Hero pokemon={pokemon} inputBox={inputBox} />
-      <Pokemon pokemon={filterPokemon(pokemon)} />
+      <div
+        className={
+          isCartClicked ? "opacity-20 pointer-events-none" : "opacity-100"
+        }
+      >
+        <Header handleChange={handleChange} handleCartClick={handleCartClick} />
+
+        <Hero pokemon={pokemon} inputBox={inputBox} />
+        <Pokemon pokemon={filterPokemon(pokemon)} />
+      </div>
     </>
   );
 }

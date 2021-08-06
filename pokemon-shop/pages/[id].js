@@ -91,95 +91,104 @@ const PokemonDetails = ({
 
   return (
     <>
-      <Header handleChange={handleChange} handleCartClick={handleCartClick} />
       <Bag
         bagItems={bagItems}
         removeItemFromBag={removeItemFromBag}
         isCartClicked={isCartClicked}
         handleCartClick={handleCartClick}
       />
-      <div className="flex flex-col items-center justify-center pt-72 2xl:pt-32 2xl:w-2/3 2xl:m-auto 2xl:flex 2xl:flex-row 2xl:items-start 2xl:justify-center">
-        <div className="2xl:w-1/2 2xl:flex 2xl:items-center 2xl:justify-center">
-          {pokemon.sprites.front_default ? (
-            <Image
-              src={pokemon.sprites.front_default}
-              alt={pokemon.name}
-              width="300"
-              height="300"
-              quality="100"
-            />
-          ) : (
-            <p>No Image</p>
-          )}
-        </div>
+      <div
+        className={
+          isCartClicked ? "opacity-20 pointer-events-none" : "opacity-100"
+        }
+      >
+        <Header handleChange={handleChange} handleCartClick={handleCartClick} />
 
-        <div className="w-2/3 2xl:w-2/5">
-          {/* <p>{"ID: " + pokemon.id}</p> */}
-          <p className="font-semibold text-2xl ">
-            {transformFirstLetterUppercase(pokemon.name)}
-          </p>
-          <p className="font-light mb-5">{formatTypes(pokemon)}</p>
-          <p className="font-semibold text-xl mb-5">
-            ${price(pokemon.weight, pokemon.height)}
-          </p>
-          <button
-            onClick={() => addToBag(pokemon, price, formatTypes)}
-            className="w-full bg-green-600 text-white font-light py-2 px-4 inline-flex items-center justify-center transition duration-500 hover:bg-green-500"
-          >
-            ADD TO BAG
-          </button>
-
-          <div className="mt-10">
-            <p
-              onClick={() => setIsToggleOn((prevIsToggleOn) => !prevIsToggleOn)}
-              className="mb-5 inline-flex items-center justify-center cursor-pointer"
-            >
-              Moves
-              <svg
-                className={
-                  isToggleOn
-                    ? "ml-1 fill-current h-4 w-4 rotate-180"
-                    : "ml-1 fill-current h-4 w-4 rotate-0"
-                }
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-              >
-                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />{" "}
-              </svg>
-            </p>
-            <ul className={isToggleOn ? "font-light" : "font-light hidden"}>
-              {pokemon.moves.map((moves) => (
-                <li key={moves.move.name}>
-                  {transformFirstLetterUppercase(moves.move.name)}
-                </li>
-              ))}
-            </ul>
+        <div className="flex flex-col items-center justify-center pt-72 2xl:pt-32 2xl:w-2/3 2xl:m-auto 2xl:flex 2xl:flex-row 2xl:items-start 2xl:justify-center">
+          <div className="2xl:w-1/2 2xl:flex 2xl:items-center 2xl:justify-center">
+            {pokemon.sprites.front_default ? (
+              <Image
+                src={pokemon.sprites.front_default}
+                alt={pokemon.name}
+                width="300"
+                height="300"
+                quality="100"
+              />
+            ) : (
+              <p>No Image</p>
+            )}
           </div>
-          <div className="border-b"></div>
 
-          <p className="font-light mt-5">Weight (lbs) - {pokemon.weight}</p>
-          <div className="border-b mt-5"></div>
+          <div className="w-2/3 2xl:w-2/5">
+            {/* <p>{"ID: " + pokemon.id}</p> */}
+            <p className="font-semibold text-2xl ">
+              {transformFirstLetterUppercase(pokemon.name)}
+            </p>
+            <p className="font-light mb-5">{formatTypes(pokemon)}</p>
+            <p className="font-semibold text-xl mb-5">
+              ${price(pokemon.weight, pokemon.height)}
+            </p>
+            <button
+              onClick={() => addToBag(pokemon, price, formatTypes)}
+              className="w-full bg-green-600 text-white font-light py-2 px-4 inline-flex items-center justify-center transition duration-500 hover:bg-green-500"
+            >
+              ADD TO BAG
+            </button>
 
-          <p className="font-light mt-5">Height (ft) - {pokemon.height}</p>
-          <div className="border-b mt-5"></div>
+            <div className="mt-10">
+              <p
+                onClick={() =>
+                  setIsToggleOn((prevIsToggleOn) => !prevIsToggleOn)
+                }
+                className="mb-5 inline-flex items-center justify-center cursor-pointer"
+              >
+                Moves
+                <svg
+                  className={
+                    isToggleOn
+                      ? "ml-1 fill-current h-4 w-4 rotate-180"
+                      : "ml-1 fill-current h-4 w-4 rotate-0"
+                  }
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />{" "}
+                </svg>
+              </p>
+              <ul className={isToggleOn ? "font-light" : "font-light hidden"}>
+                {pokemon.moves.map((moves) => (
+                  <li key={moves.move.name}>
+                    {transformFirstLetterUppercase(moves.move.name)}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="border-b"></div>
 
-          <div className="mt-5 mb-10 font-light">
-            {pokemon.stats.map((moves) => (
-              <>
-                <p key={moves.stat.name}>
-                  {transformFirstLetterUppercase(moves.stat.name)}
-                </p>
-                <div className="w-full bg-gray-100 mb-5">
-                  <div
-                    className={`${statsWidth(
-                      moves.base_stat
-                    )} bg-blue-500 text-sm text-white font-light py-1 text-center`}
-                  >
-                    {moves.base_stat}
+            <p className="font-light mt-5">Weight (lbs) - {pokemon.weight}</p>
+            <div className="border-b mt-5"></div>
+
+            <p className="font-light mt-5">Height (ft) - {pokemon.height}</p>
+            <div className="border-b mt-5"></div>
+
+            <div className="mt-5 mb-10 font-light">
+              {pokemon.stats.map((moves) => (
+                <>
+                  <p key={moves.stat.name}>
+                    {transformFirstLetterUppercase(moves.stat.name)}
+                  </p>
+                  <div className="w-full bg-gray-100 mb-5">
+                    <div
+                      className={`${statsWidth(
+                        moves.base_stat
+                      )} bg-blue-500 text-sm text-white font-light py-1 text-center`}
+                    >
+                      {moves.base_stat}
+                    </div>
                   </div>
-                </div>
-              </>
-            ))}
+                </>
+              ))}
+            </div>
           </div>
         </div>
       </div>
