@@ -8,7 +8,7 @@ const BagItems = ({ Icon, bagItems, removeItemFromBag }) => {
           <p key={bagItems.pokemonType}>{bagItems.pokemonType}</p>
           <Icon
             onClick={() => removeItemFromBag(bagItems.pokemonName)}
-            className="h-8"
+            className="h-8 cursor-pointer"
           />
         </>
       ))}
