@@ -1,8 +1,13 @@
-import { XIcon } from "@heroicons/react/solid";
+import { XIcon, TrashIcon } from "@heroicons/react/solid";
 import BagItems from "./BagItems";
 import CloseButton from "./CloseButton";
 
-const Bag = ({ isCartClicked, handleCartClick, bagItems }) => {
+const Bag = ({
+  isCartClicked,
+  handleCartClick,
+  bagItems,
+  removeItemFromBag,
+}) => {
   return (
     <div
       className={
@@ -12,7 +17,11 @@ const Bag = ({ isCartClicked, handleCartClick, bagItems }) => {
       }
     >
       <CloseButton Icon={XIcon} handleCartClick={handleCartClick} />
-      <BagItems bagItems={bagItems} />
+      <BagItems
+        Icon={TrashIcon}
+        bagItems={bagItems}
+        removeItemFromBag={removeItemFromBag}
+      />
     </div>
   );
 };

@@ -33,6 +33,7 @@ const PokemonDetails = ({
   isCartClicked,
   handleCartClick,
   addToBag,
+  removeItemFromBag,
   bagItems,
 }) => {
   const [isToggleOn, setIsToggleOn] = useState(false);
@@ -93,6 +94,7 @@ const PokemonDetails = ({
       <Header handleChange={handleChange} handleCartClick={handleCartClick} />
       <Bag
         bagItems={bagItems}
+        removeItemFromBag={removeItemFromBag}
         isCartClicked={isCartClicked}
         handleCartClick={handleCartClick}
       />

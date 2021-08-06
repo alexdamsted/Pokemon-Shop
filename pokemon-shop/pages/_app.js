@@ -34,6 +34,12 @@ function MyApp({ Component, pageProps }) {
     ]);
   };
 
+  const removeItemFromBag = (pokemonName) => {
+    setBagItems((prevState) =>
+      prevState.filter((items) => items.pokemonName != pokemonName)
+    );
+  };
+
   console.log(bagItems);
 
   return (
@@ -46,6 +52,7 @@ function MyApp({ Component, pageProps }) {
       filterPokemon={filterPokemon}
       addToBag={addToBag}
       bagItems={bagItems}
+      removeItemFromBag={removeItemFromBag}
     />
   );
 }
