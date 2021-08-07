@@ -1,6 +1,6 @@
 const CloseButton = ({ Icon, handleCartClick }) => {
   return (
-    <div className="absolute top-2 left-2">
+    <div className="absolute">
       <Icon className="h-8 cursor-pointer" onClick={() => handleCartClick()} />
     </div>
   );
