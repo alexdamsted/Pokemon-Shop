@@ -1,5 +1,6 @@
 import { XIcon, TrashIcon } from "@heroicons/react/solid";
 import BagItems from "./BagItems";
+import CheckoutButton from "./CheckoutButton";
 import CloseButton from "./CloseButton";
 
 const Bag = ({
@@ -17,6 +18,7 @@ const Bag = ({
       }
     >
       <CloseButton Icon={XIcon} handleCartClick={handleCartClick} />
+      <CheckoutButton />
       <BagItems
         Icon={TrashIcon}
         bagItems={bagItems}
