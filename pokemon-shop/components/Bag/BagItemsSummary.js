@@ -9,7 +9,7 @@ const BagItemsSummary = ({
   useEffect(() => {
     getTotalItems();
     getTotalPrice();
-  }, [getTotalItems]);
+  }, [getTotalItems, getTotalPrice]);
   return (
     <div className="flex justify-between bg-gray-100 text-sm border border-black px-6 py-4 mb-6">
       <div className="">
