@@ -130,7 +130,7 @@ const PokemonDetails = ({
             </p>
             <button
               onClick={() => addToBag(pokemon, price, formatTypes)}
-              className="w-full bg-green-600 text-white font-light py-2 px-4 inline-flex items-center justify-center transition duration-500 hover:bg-green-500"
+              className="w-full bg-green-600 text-white font-opensans font-semibold py-2 px-4 inline-flex items-center justify-center transition duration-500 hover:bg-green-500"
             >
               ADD TO BAG
             </button>
