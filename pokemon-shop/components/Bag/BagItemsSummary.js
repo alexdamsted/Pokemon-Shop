@@ -1,6 +1,6 @@
 const BagItemsSummary = () => {
   return (
-    <div className="flex justify-between border border-black px-6 py-4">
+    <div className="flex justify-between border border-black px-6 py-4 mb-6">
       <div className="">
         <p className="py-1">Item amount</p>
         <p className="py-1">Shipping cost</p>
