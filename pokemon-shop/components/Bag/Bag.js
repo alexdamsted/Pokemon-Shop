@@ -11,6 +11,8 @@ const Bag = ({
   removeItemFromBag,
   getTotalPrice,
   getTotalItems,
+  totalPrice,
+  totalItems,
 }) => {
   return (
     <div
@@ -25,6 +27,8 @@ const Bag = ({
       <BagItemsSummary
         getTotalPrice={getTotalPrice}
         getTotalItems={getTotalItems}
+        totalPrice={totalPrice}
+        totalItems={totalItems}
       />
       <BagItems
         Icon={TrashIcon}

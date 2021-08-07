@@ -4,7 +4,7 @@ const BagItems = ({ Icon, bagItems, removeItemFromBag }) => {
   return (
     <>
       {bagItems.map((bagItems) => (
-        <div className="flex py-3 border-b w-100">
+        <div key={bagItems.pokemonSprite} className="flex py-3 border-b w-100">
           <div className="flex items-center justify-center w-1/2">
             {bagItems.pokemonSprite ? (
               <Image

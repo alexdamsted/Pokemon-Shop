@@ -37,6 +37,8 @@ const PokemonDetails = ({
   bagItems,
   getTotalPrice,
   getTotalItems,
+  totalPrice,
+  totalItems,
 }) => {
   const [isToggleOn, setIsToggleOn] = useState(false);
 
@@ -100,6 +102,8 @@ const PokemonDetails = ({
         handleCartClick={handleCartClick}
         getTotalPrice={getTotalPrice}
         getTotalItems={getTotalItems}
+        totalPrice={totalPrice}
+        totalItems={totalItems}
       />
       <div
         className={
@@ -177,12 +181,13 @@ const PokemonDetails = ({
 
             <div className="mt-5 mb-10 font-light">
               {pokemon.stats.map((moves) => (
-                <>
+                <div key={moves.stat.url}>
                   <p key={moves.stat.name}>
                     {transformFirstLetterUppercase(moves.stat.name)}
                   </p>
                   <div className="w-full bg-gray-100 mb-5">
                     <div
+                      key={moves.base_stat}
                       className={`${statsWidth(
                         moves.base_stat
                       )} bg-blue-500 text-sm text-white font-light py-1 text-center`}
@@ -190,7 +195,7 @@ const PokemonDetails = ({
                       {moves.base_stat}
                     </div>
                   </div>
-                </>
+                </div>
               ))}
             </div>
           </div>

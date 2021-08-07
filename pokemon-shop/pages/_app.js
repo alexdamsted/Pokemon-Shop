@@ -48,14 +48,12 @@ function MyApp({ Component, pageProps }) {
     let total = 0;
     bagItems.forEach((pokemon) => (total += pokemon.pokemonPrice));
     setTotalPrice(total);
-    return totalPrice;
   };
 
   const getTotalItems = () => {
     let total = 0;
     bagItems.forEach(() => (total += 1));
     setTotalItems(total);
-    return totalItems;
   };
 
   return (
@@ -71,6 +69,8 @@ function MyApp({ Component, pageProps }) {
       removeItemFromBag={removeItemFromBag}
       getTotalPrice={getTotalPrice}
       getTotalItems={getTotalItems}
+      totalPrice={totalPrice}
+      totalItems={totalItems}
     />
   );
 }
