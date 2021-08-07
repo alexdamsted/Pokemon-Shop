@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const BagItems = ({ Icon, bagItems, removeItemFromBag }) => {
   return (
-    <div className="">
+    <>
       {bagItems.map((bagItems) => (
         <div className="flex py-3 border-b w-100">
           <div className="flex items-center justify-center w-1/2">
@@ -46,7 +46,7 @@ const BagItems = ({ Icon, bagItems, removeItemFromBag }) => {
           </div>
         </div>
       ))}
-    </div>
+    </>
   );
 };
 

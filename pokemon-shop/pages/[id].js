@@ -35,6 +35,8 @@ const PokemonDetails = ({
   addToBag,
   removeItemFromBag,
   bagItems,
+  getTotalPrice,
+  getTotalItems,
 }) => {
   const [isToggleOn, setIsToggleOn] = useState(false);
 
@@ -44,7 +46,7 @@ const PokemonDetails = ({
 
   const price = (weight, height) => {
     const price = height + weight * 50;
-    return price.toLocaleString(); // A dope function for adding commas to dynamic numbers
+    return price; // A dope function for adding commas to dynamic numbers
   };
 
   const formatTypes = (pokemon) => {
@@ -96,6 +98,8 @@ const PokemonDetails = ({
         removeItemFromBag={removeItemFromBag}
         isCartClicked={isCartClicked}
         handleCartClick={handleCartClick}
+        getTotalPrice={getTotalPrice}
+        getTotalItems={getTotalItems}
       />
       <div
         className={

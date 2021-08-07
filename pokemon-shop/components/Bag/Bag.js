@@ -9,6 +9,8 @@ const Bag = ({
   handleCartClick,
   bagItems,
   removeItemFromBag,
+  getTotalPrice,
+  getTotalItems,
 }) => {
   return (
     <div
@@ -20,7 +22,10 @@ const Bag = ({
     >
       <CloseButton Icon={XIcon} handleCartClick={handleCartClick} />
       <CheckoutButton />
-      <BagItemsSummary />
+      <BagItemsSummary
+        getTotalPrice={getTotalPrice}
+        getTotalItems={getTotalItems}
+      />
       <BagItems
         Icon={TrashIcon}
         bagItems={bagItems}

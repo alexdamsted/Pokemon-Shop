@@ -19,8 +19,10 @@ export default function Home({
   handleCartClick,
   handleChange,
   filterPokemon,
-  bagItems,
   removeItemFromBag,
+  bagItems,
+  getTotalPrice,
+  getTotalItems,
 }) {
   return (
     <>
@@ -29,6 +31,8 @@ export default function Home({
         removeItemFromBag={removeItemFromBag}
         isCartClicked={isCartClicked}
         handleCartClick={handleCartClick}
+        getTotalPrice={getTotalPrice}
+        getTotalItems={getTotalItems}
       />
       <div
         className={

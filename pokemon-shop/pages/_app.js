@@ -5,6 +5,8 @@ function MyApp({ Component, pageProps }) {
   const [inputBox, setInputBox] = useState({ inputBox: [] });
   const [isCartClicked, setIsCartClicked] = useState(false);
   const [bagItems, setBagItems] = useState([]);
+  const [totalPrice, setTotalPrice] = useState();
+  const [totalItems, setTotalItems] = useState();
 
   const handleCartClick = () => {
     setIsCartClicked(!isCartClicked);
@@ -41,7 +43,19 @@ function MyApp({ Component, pageProps }) {
     );
   };
 
-  console.log(bagItems);
+  const getTotalPrice = () => {
+    let total = 0;
+    bagItems.forEach((pokemon) => (total += pokemon.pokemonPrice));
+    setTotalPrice(total);
+    return totalPrice;
+  };
+
+  const getTotalItems = () => {
+    let total = 0;
+    bagItems.forEach(() => (total += 1));
+    setTotalItems(total);
+    return totalItems;
+  };
 
   return (
     <Component
@@ -54,6 +68,8 @@ function MyApp({ Component, pageProps }) {
       addToBag={addToBag}
       bagItems={bagItems}
       removeItemFromBag={removeItemFromBag}
+      getTotalPrice={getTotalPrice}
+      getTotalItems={getTotalItems}
     />
   );
 }
