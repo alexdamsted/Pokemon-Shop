@@ -35,6 +35,7 @@ function MyApp({ Component, pageProps }) {
         pokemonSprite: pokemon.sprites.front_default,
       },
     ]);
+    handleCartClick();
   };
 
   const removeItemFromBag = (pokemonName) => {
