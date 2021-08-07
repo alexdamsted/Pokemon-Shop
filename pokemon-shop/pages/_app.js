@@ -30,6 +30,7 @@ function MyApp({ Component, pageProps }) {
         pokemonName: pokemon.name,
         pokemonPrice: price(pokemon.weight, pokemon.height),
         pokemonType: formatTypes(pokemon),
+        pokemonSprite: pokemon.sprites.front_default,
       },
     ]);
   };
