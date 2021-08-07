@@ -1,6 +1,6 @@
 const BagItemsSummary = ({ getTotalPrice, getTotalItems }) => {
   return (
-    <div className="flex justify-between text-sm border border-black px-6 py-4 mb-6">
+    <div className="flex justify-between bg-gray-100 text-sm border border-black px-6 py-4 mb-6">
       <div className="">
         <p className="py-1 font-light">Items</p>
         <p className="py-1 font-light">Shipping</p>
