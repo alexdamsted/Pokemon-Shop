@@ -38,7 +38,7 @@ function MyApp({ Component, pageProps }) {
 
     handleCartClick();
   };
-  console.log(bagItems);
+
   const removeItemFromBag = (pokemonName) => {
     setBagItems(bagItems.filter((items) => items.pokemonName != pokemonName));
   };
