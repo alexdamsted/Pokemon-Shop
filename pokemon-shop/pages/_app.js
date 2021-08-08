@@ -32,12 +32,13 @@ function MyApp({ Component, pageProps }) {
         pokemonPrice: price(pokemon.weight, pokemon.height),
         pokemonType: formatTypes(pokemon),
         pokemonSprite: pokemon.sprites.front_default,
-        pokemonId: totalItems,
+        pokemonId: totalItems + Math.random(), // Useful for unique key props
       },
     ]);
 
     handleCartClick();
   };
+  console.log(bagItems);
 
   const removeItemFromBag = (pokemonId) => {
     setBagItems(bagItems.filter((items) => items.pokemonId != pokemonId));
