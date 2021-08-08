@@ -6,7 +6,7 @@ const Hero = ({ inputBox }) => {
       className={`${
         inputBox.inputBox != ""
           ? "hidden"
-          : "hidden relative lg:flex pt-40 xl:pt-52 2xl:pt-28"
+          : "hidden relative lg:flex lg:pt-40 xl:pt-52 2xl:pt-28"
       }`}
     >
       <Image
