@@ -43,7 +43,7 @@ const BagItems = ({ Icon, bagItems, removeItemFromBag }) => {
           </div>
           <div className="flex w-1/3 items-center justify-center">
             <Icon
-              onClick={() => removeItemFromBag(bagItems.pokemonName)}
+              onClick={() => removeItemFromBag(bagItems.pokemonId)}
               className="h-8 cursor-pointer hover:text-red-600"
             />
           </div>

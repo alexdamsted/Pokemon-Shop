@@ -39,8 +39,8 @@ function MyApp({ Component, pageProps }) {
     handleCartClick();
   };
 
-  const removeItemFromBag = (pokemonName) => {
-    setBagItems(bagItems.filter((items) => items.pokemonName != pokemonName));
+  const removeItemFromBag = (pokemonId) => {
+    setBagItems(bagItems.filter((items) => items.pokemonId != pokemonId));
   };
 
   const getTotalPrice = () => {
