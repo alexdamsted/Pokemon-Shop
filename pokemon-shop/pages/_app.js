@@ -25,7 +25,6 @@ function MyApp({ Component, pageProps }) {
   };
 
   const addToBag = (pokemon, price, formatTypes) => {
-    // Concat prevState with newly created state
     setBagItems((prevState) => [
       ...prevState,
       {
@@ -33,15 +32,15 @@ function MyApp({ Component, pageProps }) {
         pokemonPrice: price(pokemon.weight, pokemon.height),
         pokemonType: formatTypes(pokemon),
         pokemonSprite: pokemon.sprites.front_default,
+        pokemonId: totalItems,
       },
     ]);
+
     handleCartClick();
   };
-
+  console.log(bagItems);
   const removeItemFromBag = (pokemonName) => {
-    setBagItems((prevState) =>
-      prevState.filter((items) => items.pokemonName != pokemonName)
-    );
+    setBagItems(bagItems.filter((items) => items.pokemonName != pokemonName));
   };
 
   const getTotalPrice = () => {

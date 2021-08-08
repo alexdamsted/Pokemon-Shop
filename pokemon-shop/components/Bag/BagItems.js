@@ -4,7 +4,10 @@ const BagItems = ({ Icon, bagItems, removeItemFromBag }) => {
   return (
     <>
       {bagItems.map((bagItems) => (
-        <div key={bagItems.pokemonSprite} className="flex py-3 border-b w-100">
+        <div
+          key={bagItems.pokemonSprite + bagItems.pokemonId}
+          className="flex py-3 border-b w-100"
+        >
           <div className="flex items-center justify-center w-1/2">
             {bagItems.pokemonSprite ? (
               <Image
@@ -21,19 +24,19 @@ const BagItems = ({ Icon, bagItems, removeItemFromBag }) => {
           <div className="flex w-1/3 flex-col items-start justify-center">
             <p
               className="text-black font-bold text-sm"
-              key={bagItems.pokemonName}
+              key={bagItems.pokemonName + bagItems.pokemonId}
             >
               {bagItems.pokemonName.toUpperCase()}
             </p>
             <p
               className="text-gray-600 font-bold text-sm"
-              key={bagItems.pokemonPrice}
+              key={bagItems.pokemonPrice + bagItems.pokemonId}
             >
               ${bagItems.pokemonPrice}
             </p>
             <p
               className="my-3 text-black font-light text-sm"
-              key={bagItems.pokemonType}
+              key={bagItems.pokemonType + bagItems.pokemonId}
             >
               Type: {bagItems.pokemonType}
             </p>
