@@ -23,6 +23,8 @@ export default function Home({
   bagItems,
   getTotalPrice,
   getTotalItems,
+  totalPrice,
+  totalItems,
 }) {
   return (
     <>
@@ -33,6 +35,8 @@ export default function Home({
         handleCartClick={handleCartClick}
         getTotalPrice={getTotalPrice}
         getTotalItems={getTotalItems}
+        totalPrice={totalPrice}
+        totalItems={totalItems}
       />
       <div
         className={
