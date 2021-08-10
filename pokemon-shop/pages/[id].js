@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Header from "../components/Header";
 import Bag from "../components/Bag/Bag";
@@ -30,6 +30,7 @@ export const getStaticProps = async (context) => {
 const PokemonDetails = ({
   pokemon,
   handleChange,
+  clearInputBox,
   isCartClicked,
   handleCartClick,
   addToBag,
@@ -110,7 +111,11 @@ const PokemonDetails = ({
           isCartClicked ? "opacity-20 pointer-events-none" : "opacity-100"
         }
       >
-        <Header handleChange={handleChange} handleCartClick={handleCartClick} />
+        <Header
+          clearInputBox={clearInputBox}
+          handleChange={handleChange}
+          handleCartClick={handleCartClick}
+        />
 
         <div className="flex flex-col items-center justify-center pt-72 2xl:pt-48 2xl:w-2/3 2xl:m-auto 2xl:flex 2xl:flex-row 2xl:items-start 2xl:justify-center">
           <div className="2xl:w-1/2 2xl:flex 2xl:items-center 2xl:justify-center">

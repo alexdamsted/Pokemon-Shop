@@ -11,12 +11,12 @@ import BagHeaderItem from "./Header_Items/BagHeaderItem";
 import SavedHeaderItem from "./Header_Items/SavedHeaderItem";
 import AccountHeaderItem from "./Header_Items/AccountHeaderItem";
 
-function Header({ handleChange, handleCartClick }) {
+function Header({ handleChange, handleCartClick, clearInputBox }) {
   return (
     <header className="fixed w-full z-40">
       <div className="py-4 px-8 2xl:flex 2xl:justify-between bg-white border-b border-gray-300">
         <div className="flex justify-center mb-4 2xl:m-0">
-          <Logo text="Pokémon Shop" />
+          <Logo text="Pokémon Shop" clearInputBox={clearInputBox} />
         </div>
         <div className="2xl:flex 2xl:justify-end">
           <div className="flex justify-center 2xl:mr-10">

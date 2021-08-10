@@ -16,6 +16,10 @@ function MyApp({ Component, pageProps }) {
     setInputBox({ inputBox: event.target.value });
   };
 
+  const clearInputBox = () => {
+    setInputBox({ inputBox: "" });
+  };
+
   const filterPokemon = (pokemon) => {
     return pokemon.results.filter((pokemon) =>
       pokemon.name
@@ -59,6 +63,7 @@ function MyApp({ Component, pageProps }) {
     <Component
       {...pageProps}
       inputBox={inputBox}
+      clearInputBox={clearInputBox}
       isCartClicked={isCartClicked}
       handleCartClick={handleCartClick}
       handleChange={handleChange}

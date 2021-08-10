@@ -15,6 +15,7 @@ export const getStaticProps = async () => {
 export default function Home({
   pokemon,
   inputBox,
+  clearInputBox,
   isCartClicked,
   handleCartClick,
   handleChange,
@@ -43,7 +44,11 @@ export default function Home({
           isCartClicked ? "opacity-20 pointer-events-none" : "opacity-100"
         }
       >
-        <Header handleChange={handleChange} handleCartClick={handleCartClick} />
+        <Header
+          clearInputBox={clearInputBox}
+          handleChange={handleChange}
+          handleCartClick={handleCartClick}
+        />
 
         <Hero pokemon={pokemon} inputBox={inputBox} />
         <Pokemon pokemon={filterPokemon(pokemon)} />
