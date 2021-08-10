@@ -4,7 +4,7 @@ import Hero from "../components/Hero";
 import Bag from "../components/Bag/Bag";
 
 export const getStaticProps = async () => {
-  const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=2000/");
+  const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=700/");
   const pokemonData = await res.json();
 
   return {
