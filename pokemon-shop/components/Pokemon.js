@@ -18,7 +18,7 @@ const Pokemon = ({ pokemon }) => {
       {pokemon.map((pokemon) => (
         <div className="m-5 p-5 border bg-gray-50" key={pokemon.name}>
           <Link href={pokemon.name}>
-            <h1 className="text-center text-2xl font-light hover:cursor-pointer">
+            <h1 className="text-center text-small font-opensans font-light hover:cursor-pointer">
               {transformFirstLetterUppercase(pokemon.name)}
             </h1>
           </Link>
