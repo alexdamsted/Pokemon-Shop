@@ -16,7 +16,7 @@ const Pokemon = ({ pokemon }) => {
     <main className="bg-white text-gray-600 pt-96 lg:pt-32 flex flex-col items-center justify-center sm:flex-row sm:flex-wrap">
       {/* this should be a stateful array of all pokemon??? */}
       {pokemon.map((pokemon) => (
-        <div className="p-5" key={pokemon.name}>
+        <div className="m-5 p-5 border bg-gray-50" key={pokemon.name}>
           <Link href={pokemon.name}>
             <h1 className="text-center text-2xl font-light hover:cursor-pointer">
               {transformFirstLetterUppercase(pokemon.name)}
@@ -30,7 +30,7 @@ const Pokemon = ({ pokemon }) => {
                 alt="pokemon"
                 width="250"
                 height="250"
-                className="hover:cursor-pointer"
+                className="transition duration-200 transform hover:scale-125 hover:cursor-pointer"
               />
             </a>
           </Link>
