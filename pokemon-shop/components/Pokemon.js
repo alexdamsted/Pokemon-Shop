@@ -1,7 +1,19 @@
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 const Pokemon = ({ pokemon }) => {
+  const [TotalPokemon, setTotalPokemon] = useState();
+  useEffect(() => {
+    getTotalPokemon();
+  }, [pokemon]);
+
+  const getTotalPokemon = () => {
+    let total = 0;
+    pokemon.forEach(() => (total += 1));
+    setTotalPokemon(total);
+  };
+
   const getSpriteUrl = (url) => {
     const pokemonIndex = url.split("/")[url.split("/").length - 2];
     const pokemonSpriteUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonIndex}.png`;
@@ -24,7 +36,11 @@ const Pokemon = ({ pokemon }) => {
           website, feel free to use it.
         </p>
       </section>
-      {/* this should be a stateful array of all pokemon??? */}
+      <section className="flex flex-col w-full">
+        <p className="py-5 text-center font-opensans font-light text-xs">
+          {TotalPokemon} results
+        </p>
+      </section>
       {pokemon.map((pokemon) => (
         <div className="m-5 p-5 border bg-gray-50" key={pokemon.name}>
           <Link href={pokemon.name}>
