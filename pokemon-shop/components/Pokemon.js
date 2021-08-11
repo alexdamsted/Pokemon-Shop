@@ -13,7 +13,17 @@ const Pokemon = ({ pokemon }) => {
   };
 
   return (
-    <main className="bg-white text-gray-600 pt-96 lg:pt-32 flex flex-col items-center justify-center sm:flex-row sm:flex-wrap">
+    <main className="px-10 bg-white text-gray-600 pt-96 lg:pt-32 flex flex-col items-center justify-center sm:flex-row sm:flex-wrap">
+      <section className="mb-5 flex flex-col items-center justify-center w-full border-b">
+        <h1 className="pt-5 text-2xl font-opensans font-semibold">
+          All Pokémon
+        </h1>
+        <p className="mb-5 py-5 text-center font-opensans font-light text-xs">
+          Here you will find approximately all Pokémon found in the first 5
+          Generations. There is a <u>search bar</u> up-top in the header of this
+          website, feel free to use it.
+        </p>
+      </section>
       {/* this should be a stateful array of all pokemon??? */}
       {pokemon.map((pokemon) => (
         <div className="m-5 p-5 border bg-gray-50" key={pokemon.name}>
