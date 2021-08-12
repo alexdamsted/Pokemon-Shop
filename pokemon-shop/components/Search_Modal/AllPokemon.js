@@ -8,14 +8,13 @@ const AllPokemon = ({ allPokemon, inputBox }) => {
   };
   return (
     <>
-      <div className="mb-5 text-xl text-black">
+      <div className="flex justify-center items-center mb-5 text-xl text-black">
         <p>Product Suggestions for: {inputBox.inputBox}</p>
       </div>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap justify-center items-center">
         {allPokemon.map((allPokemon) => (
-          <div>
+          <div className="p-5 flex flex-col justify-center items-center">
             <p className="text-xl text-black">{allPokemon.name}</p>
-
             <Image
               src={getSpriteUrl(allPokemon.url)}
               alt="pokemon"
