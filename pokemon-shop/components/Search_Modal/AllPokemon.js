@@ -6,6 +6,11 @@ const AllPokemon = ({ allPokemon, inputBox }) => {
     const pokemonSpriteUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonIndex}.png`;
     return pokemonSpriteUrl;
   };
+
+  const transformFirstLetterUppercase = (name) => {
+    return name[0].toUpperCase() + name.substring(1);
+  };
+
   return (
     <>
       <div className="flex justify-center items-center mb-5 text-xl text-black">
@@ -14,7 +19,9 @@ const AllPokemon = ({ allPokemon, inputBox }) => {
       <div className="flex flex-wrap justify-center items-center">
         {allPokemon.map((allPokemon) => (
           <div className="p-5 flex flex-col justify-center items-center">
-            <p className="text-xl text-black">{allPokemon.name}</p>
+            <p className="text-xl text-black">
+              {transformFirstLetterUppercase(allPokemon.name)}
+            </p>
             <Image
               src={getSpriteUrl(allPokemon.url)}
               alt="pokemon"
