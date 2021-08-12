@@ -20,7 +20,10 @@ const AllPokemon = ({ allPokemon, inputBox, clearInputBox }) => {
       </div>
       <div className="flex flex-wrap justify-center items-center">
         {allPokemon.map((allPokemon) => (
-          <div className="p-5 flex flex-col justify-center items-center">
+          <div
+            key={allPokemon.name}
+            className="p-5 flex flex-col justify-center items-center"
+          >
             <p className="font-opensans font-light text-sm text-black">
               {transformFirstLetterUppercase(allPokemon.name)}
             </p>
