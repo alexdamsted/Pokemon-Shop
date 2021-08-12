@@ -22,8 +22,13 @@ export const getStaticProps = async (context) => {
   const res = await fetch("https://pokeapi.co/api/v2/pokemon/" + name);
   const pokemonData = await res.json();
 
+  const pokemonSearchRes = await fetch(
+    "https://pokeapi.co/api/v2/pokemon?limit=700/"
+  );
+  const pokemonSearchData = await pokemonSearchRes.json();
+
   return {
-    props: { pokemon: pokemonData },
+    props: { pokemon: pokemonData, allPokemon: pokemonSearchData },
   };
 };
 
@@ -49,7 +54,7 @@ const PokemonDetails = ({
 
   const price = (weight, height) => {
     const price = height + weight * 50;
-    return price; // A dope function for adding commas to dynamic numbers
+    return price;
   };
 
   const formatTypes = (pokemon) => {
