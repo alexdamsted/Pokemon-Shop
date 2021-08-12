@@ -4,16 +4,19 @@ import Hero from "../components/Hero";
 import Bag from "../components/Bag/Bag";
 
 export const getStaticProps = async () => {
-  const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=700/");
-  const pokemonData = await res.json();
+  const pokemonSearchRes = await fetch(
+    "https://pokeapi.co/api/v2/pokemon?limit=700/"
+  );
+  const pokemonSearchData = await pokemonSearchRes.json();
 
   return {
-    props: { pokemon: pokemonData },
+    props: { allPokemon: pokemonSearchData },
   };
 };
 
 export default function Home({
-  pokemon,
+  allPokemon,
+
   inputBox,
   clearInputBox,
   isCartClicked,
@@ -50,8 +53,8 @@ export default function Home({
           handleCartClick={handleCartClick}
         />
 
-        <Hero pokemon={pokemon} inputBox={inputBox} />
-        <Pokemon pokemon={filterPokemon(pokemon)} />
+        <Hero pokemon={allPokemon} inputBox={inputBox} />
+        <Pokemon pokemon={filterPokemon(allPokemon)} />
       </div>
     </>
   );
