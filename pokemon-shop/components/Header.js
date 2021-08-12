@@ -35,9 +35,9 @@ function Header({
           </div>
           <div
             className={
-              inputBox.inputBox
-                ? "mt-1 top-28 right-0 bg-gray-100 border p-5 absolute overflow-y-scroll h-60 w-full"
-                : "hidden"
+              inputBox.inputBox == ""
+                ? "hidden"
+                : "mt-1 top-28 right-0 bg-gray-100 border p-5 absolute overflow-y-scroll h-60 w-full"
             }
           >
             <AllPokemon
