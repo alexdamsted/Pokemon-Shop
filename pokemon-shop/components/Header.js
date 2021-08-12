@@ -36,7 +36,7 @@ function Header({
           <div
             className={
               inputBox.inputBox
-                ? "bg-gray-100 border p-5 absolute overflow-y-scroll h-60 w-1/3"
+                ? "mt-1 top-28 right-0 bg-gray-100 border p-5 absolute overflow-y-scroll h-60 w-full"
                 : "hidden"
             }
           >
