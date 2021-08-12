@@ -10,8 +10,9 @@ import Search from "./Search";
 import BagHeaderItem from "./Header_Items/BagHeaderItem";
 import SavedHeaderItem from "./Header_Items/SavedHeaderItem";
 import AccountHeaderItem from "./Header_Items/AccountHeaderItem";
+import AllPokemon from "./Search_Modal/AllPokemon";
 
-function Header({ handleChange, handleCartClick, clearInputBox }) {
+function Header({ handleChange, handleCartClick, clearInputBox, allPokemon }) {
   return (
     <header className="fixed w-full z-40">
       <div className="py-4 px-8 2xl:flex 2xl:justify-between bg-white border-b border-gray-300">
@@ -25,6 +26,9 @@ function Header({ handleChange, handleCartClick, clearInputBox }) {
               Icon={SearchIcon}
               placeholder="Find a Pokémon..."
             />
+          </div>
+          <div className="bg-gray-100 border p-5 absolute overflow-y-scroll h-60 w-1/3">
+            <AllPokemon allPokemon={allPokemon} />
           </div>
           <div className="flex justify-center items-center flex-col mt-4 lg:flex-row lg:gap-8 2xl:m-0">
             <BagHeaderItem

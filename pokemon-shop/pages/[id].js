@@ -18,10 +18,12 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async (context) => {
+  // Each individual Pokemon by name
   const name = context.params.id;
   const res = await fetch("https://pokeapi.co/api/v2/pokemon/" + name);
   const pokemonData = await res.json();
 
+  // All Pokemon (limit=700 to avoid Vercel ban via <Image> overloads)
   const pokemonSearchRes = await fetch(
     "https://pokeapi.co/api/v2/pokemon?limit=700/"
   );
@@ -34,6 +36,8 @@ export const getStaticProps = async (context) => {
 
 const PokemonDetails = ({
   pokemon,
+  allPokemon,
+  filterPokemon,
   handleChange,
   clearInputBox,
   isCartClicked,
@@ -120,6 +124,7 @@ const PokemonDetails = ({
           clearInputBox={clearInputBox}
           handleChange={handleChange}
           handleCartClick={handleCartClick}
+          allPokemon={filterPokemon(allPokemon)}
         />
 
         <div className="flex flex-col items-center justify-center pt-72 2xl:pt-48 2xl:w-2/3 2xl:m-auto 2xl:flex 2xl:flex-row 2xl:items-start 2xl:justify-center">

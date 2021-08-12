@@ -63,11 +63,11 @@ function MyApp({ Component, pageProps }) {
     <Component
       {...pageProps}
       inputBox={inputBox}
+      filterPokemon={filterPokemon}
       clearInputBox={clearInputBox}
       isCartClicked={isCartClicked}
       handleCartClick={handleCartClick}
       handleChange={handleChange}
-      filterPokemon={filterPokemon}
       addToBag={addToBag}
       bagItems={bagItems}
       removeItemFromBag={removeItemFromBag}
