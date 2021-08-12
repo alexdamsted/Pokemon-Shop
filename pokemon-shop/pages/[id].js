@@ -37,6 +37,7 @@ export const getStaticProps = async (context) => {
 const PokemonDetails = ({
   pokemon,
   allPokemon,
+  inputBox,
   filterPokemon,
   handleChange,
   clearInputBox,
@@ -123,6 +124,7 @@ const PokemonDetails = ({
         <Header
           clearInputBox={clearInputBox}
           handleChange={handleChange}
+          inputBox={inputBox}
           handleCartClick={handleCartClick}
           allPokemon={filterPokemon(allPokemon)}
         />
