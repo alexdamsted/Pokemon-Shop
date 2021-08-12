@@ -123,8 +123,8 @@ const PokemonDetails = ({
       >
         <Header
           clearInputBox={clearInputBox}
-          handleChange={handleChange}
           inputBox={inputBox}
+          handleChange={handleChange}
           handleCartClick={handleCartClick}
           allPokemon={filterPokemon(allPokemon)}
         />
