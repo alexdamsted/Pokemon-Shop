@@ -10,7 +10,7 @@ const Pokemon = ({ pokemon }) => {
 
   const getTotalPokemon = () => {
     let total = 0;
-    pokemon.forEach(() => (total += 1));
+    pokemon.results.forEach(() => (total += 1));
     setTotalPokemon(total);
   };
 
@@ -41,7 +41,7 @@ const Pokemon = ({ pokemon }) => {
           {TotalPokemon} results
         </p>
       </section>
-      {pokemon.map((pokemon) => (
+      {pokemon.results.map((pokemon) => (
         <div className="m-5 p-5 border bg-gray-50" key={pokemon.name}>
           <Link href={pokemon.name}>
             <h1 className="text-center text-small font-opensans font-light hover:cursor-pointer">

@@ -48,12 +48,14 @@ export default function Home({
       >
         <Header
           clearInputBox={clearInputBox}
+          inputBox={inputBox}
           handleChange={handleChange}
           handleCartClick={handleCartClick}
+          allPokemon={filterPokemon(allPokemon)}
         />
 
         <Hero pokemon={allPokemon} inputBox={inputBox} />
-        <Pokemon pokemon={filterPokemon(allPokemon)} />
+        <Pokemon pokemon={allPokemon} />
       </div>
     </>
   );
