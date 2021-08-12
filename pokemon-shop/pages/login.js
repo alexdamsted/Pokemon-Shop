@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import Bag from "../components/Bag/Bag";
+import Login from "../components/Authentication/Login";
 
 export const getStaticProps = async () => {
   const pokemonSearchRes = await fetch(
@@ -46,6 +47,7 @@ const login = ({
         handleCartClick={handleCartClick}
         allPokemon={filterPokemon(allPokemon)}
       />
+      <Login />
     </>
   );
 };
