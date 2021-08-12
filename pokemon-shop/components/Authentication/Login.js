@@ -1,56 +1,54 @@
+import Image from "next/image";
+
 const Login = () => {
   return (
-    <section class="flex flex-col pt-80 2xl:pt-0 md:flex-row h-screen items-center">
-      <div class="bg-blue-600 hidden lg:block w-full md:w-1/2 xl:w-2/3 h-screen">
-        <img
-          src="https://source.unsplash.com/random"
-          alt=""
-          class="w-full h-full object-cover"
-        />
+    <section className="flex flex-col pt-80 2xl:pt-0 md:flex-row h-screen items-center">
+      <div className="bg-gray-200 hidden lg:block w-full md:w-1/2 xl:w-2/3 h-screen">
+        {/* Put an image in here */}
       </div>
 
       <div
-        class="bg-white w-full md:max-w-md lg:max-w-full md:mx-0 md:w-1/2 xl:w-1/3 h-screen px-6 lg:px-16 xl:px-12
+        className="bg-white w-full md:max-w-md lg:max-w-full md:mx-0 md:w-1/2 xl:w-1/3 h-screen px-6 lg:px-16 xl:px-12
           flex items-center justify-center"
       >
-        <div class="w-full h-100">
-          <h1 class="text-xl md:text-2xl font-bold leading-tight mt-12">
+        <div className="w-full h-100">
+          <h1 className="text-xl md:text-2xl font-bold leading-tight mt-12">
             Sign In to your account
           </h1>
 
-          <form class="mt-6" action="#" method="POST">
+          <form className="mt-6" action="#" method="POST">
             <div>
-              <label class="block text-gray-700">Email Address</label>
+              <label className="block text-gray-700">Email Address</label>
               <input
                 type="email"
                 name=""
                 id=""
                 placeholder="Enter Email Address"
-                class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
-                autofocus
-                autocomplete
+                className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
+                autoFocus
+                autoComplete
                 required
               />
             </div>
 
-            <div class="mt-4">
-              <label class="block text-gray-700">Password</label>
+            <div className="mt-4">
+              <label className="block text-gray-700">Password</label>
               <input
                 type="password"
                 name=""
                 id=""
                 placeholder="Enter Password"
-                minlength="6"
-                class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
+                minLength="6"
+                className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
                 focus:bg-white focus:outline-none"
                 required
               />
             </div>
 
-            <div class="text-right mt-2">
+            <div className="text-right mt-2">
               <a
                 href="#"
-                class="text-sm font-semibold text-gray-700 hover:text-blue-600 focus:text-blue-600"
+                className="text-sm font-semibold text-gray-700 hover:text-blue-600 focus:text-blue-600"
               >
                 Forgot Password?
               </a>
@@ -58,24 +56,24 @@ const Login = () => {
 
             <button
               type="submit"
-              class="w-full block bg-blue-600 hover:bg-blue-500 focus:bg-blue:500 text-white font-semibold rounded-lg
+              className="w-full block bg-blue-600 hover:bg-blue-500 focus:bg-blue:500 text-white font-semibold rounded-lg
               px-4 py-3 mt-6"
             >
               Log In
             </button>
           </form>
 
-          <hr class="my-6 border-gray-300 w-full" />
+          <hr className="my-6 border-gray-300 w-full" />
 
           <button
             type="button"
-            class="w-full block bg-white hover:bg-gray-100 focus:bg-gray-100 text-gray-900 font-semibold rounded-lg px-4 py-3 border border-gray-300"
+            className="w-full block bg-white hover:bg-gray-100 focus:bg-gray-100 text-gray-900 font-semibold rounded-lg px-4 py-3 border border-gray-300"
           >
-            <div class="flex items-center justify-center">
+            <div className="flex items-center justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 xlink="http://www.w3.org/1999/xlink"
-                class="w-6 h-6"
+                className="w-6 h-6"
                 viewBox="0 0 48 48"
               >
                 <defs>
@@ -87,30 +85,33 @@ const Login = () => {
                 <clipPath id="b">
                   <use href="#a" overflow="visible" />
                 </clipPath>
-                <path clip-path="url(#b)" fill="#FBBC05" d="M0 37V11l17 13z" />
+                <path clipPath="url(#b)" fill="#FBBC05" d="M0 37V11l17 13z" />
                 <path
-                  clip-path="url(#b)"
+                  clipPath="url(#b)"
                   fill="#EA4335"
                   d="M0 11l17 13 7-6.1L48 14V0H0z"
                 />
                 <path
-                  clip-path="url(#b)"
+                  clipPath="url(#b)"
                   fill="#34A853"
                   d="M0 37l30-23 7.9 1L48 0v48H0z"
                 />
                 <path
-                  clip-path="url(#b)"
+                  clipPath="url(#b)"
                   fill="#4285F4"
                   d="M48 48L17 24l-4-3 35-10z"
                 />
               </svg>
-              <span class="ml-4">Log in with Google</span>
+              <span className="ml-4">Log in with Google</span>
             </div>
           </button>
 
-          <p class="mt-8">
+          <p className="mt-8">
             Need an account?{" "}
-            <a href="#" class="text-blue-500 hover:text-blue-600 font-semibold">
+            <a
+              href="#"
+              className="text-blue-500 hover:text-blue-600 font-semibold"
+            >
               Create an account
             </a>
           </p>
