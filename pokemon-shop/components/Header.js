@@ -40,7 +40,11 @@ function Header({
                 : "hidden"
             }
           >
-            <AllPokemon allPokemon={allPokemon} inputBox={inputBox} />
+            <AllPokemon
+              allPokemon={allPokemon}
+              inputBox={inputBox}
+              clearInputBox={clearInputBox}
+            />
           </div>
           <div className="flex justify-center items-center flex-col mt-4 lg:flex-row lg:gap-8 2xl:m-0">
             <BagHeaderItem
