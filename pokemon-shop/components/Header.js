@@ -52,7 +52,7 @@ function Header({
               Icon={ShoppingBagIcon}
               handleCartClick={handleCartClick}
             />
-            <SavedHeaderItem title="SAVED ITEMS" Icon={HeartIcon} />
+            {/* <SavedHeaderItem title="SAVED ITEMS" Icon={HeartIcon} /> */}
             <AccountHeaderItem
               title="SIGN IN / REGISTER"
               Icon={UserCircleIcon}
